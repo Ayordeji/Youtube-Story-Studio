@@ -1,0 +1,2903 @@
+{
+ "title": "The Cleaner in the Ivory Dress",
+ "style": "Photorealistic cinematic drama still set in contemporary Lagos, 50mm lens look with shallow depth of field, rich natural skin tones, warm golden highlights with deep teal shadows, polished high-end film atmosphere",
+ "characters": [
+  {
+   "id": "adaeze",
+   "name": "Adaeze",
+   "role": "Protagonist",
+   "anchor": "Nigerian woman in her mid-twenties, deep brown skin with a warm undertone, oval face with high cheekbones, large dark-brown almond eyes, soft rounded nose, full lips, natural black hair pulled into a low neat bun with a centre parting, long neck, slim build, average height, a small beauty mark beside the left eyebrow",
+   "wardrobe": [
+    {
+     "id": "uniform",
+     "label": "Cleaner uniform",
+     "description": "a plain grey short-sleeved housekeeping dress with a white collar, a white half apron tied at the waist, flat black shoes and no jewellery"
+    },
+    {
+     "id": "gown",
+     "label": "Ivory gown",
+     "description": "a floor-length ivory silk gown with long fitted sleeves and a modest boat neckline, covered in thousands of tiny hand-sewn glass beads, small pearl stud earrings and soft natural makeup"
+    },
+    {
+     "id": "simple",
+     "label": "Own clothes",
+     "description": "a plain white cotton blouse, dark blue jeans and flat brown leather sandals, with no jewellery"
+    },
+    {
+     "id": "plain",
+     "label": "Cheap dress",
+     "description": "a plain knee-length brown polyester dress that is slightly too big, flat worn sandals, no jewellery and no makeup"
+    },
+    {
+     "id": "heiress",
+     "label": "Family wealth",
+     "description": "an emerald silk blouse tucked into wide cream tailored trousers, gold drop earrings and a slim gold bracelet"
+    },
+    {
+     "id": "atelier",
+     "label": "Studio wear",
+     "description": "a cream linen shirt with rolled sleeves tucked into high-waisted tan trousers, a thin gold chain and a yellow tape measure draped around the neck"
+    },
+    {
+     "id": "launch",
+     "label": "Launch night",
+     "description": "a tailored black jumpsuit with a wide ivory sash belt, small gold hoop earrings and light makeup"
+    }
+   ]
+  },
+  {
+   "id": "vivienne",
+   "name": "Vivienne",
+   "role": "Antagonist",
+   "anchor": "Nigerian woman in her mid-forties, light-brown skin, angular face with sharp cheekbones, narrow dark eyes under thin arched eyebrows, straight slim nose, thin lips, sleek jet-black straight hair cut at the shoulders with a side parting, tall and slender with a very upright posture",
+   "wardrobe": [
+    {
+     "id": "home",
+     "label": "At home",
+     "description": "a champagne silk lounge set with a long matching robe, stacked gold bangles, diamond stud earrings and heeled satin slippers"
+    },
+    {
+     "id": "gala",
+     "label": "Gala gown",
+     "description": "a floor-length emerald-green sequinned one-shoulder gown, a heavy diamond necklace, stacked gold bracelets and deep red lipstick"
+    },
+    {
+     "id": "modest",
+     "label": "Plain dress",
+     "description": "a plain navy cotton dress with elbow-length sleeves, flat tan sandals, a thin wedding band and almost no makeup"
+    },
+    {
+     "id": "show",
+     "label": "Show guest",
+     "description": "a simple dove-grey long-sleeved midi dress, small pearl earrings, a small black handbag, hair tucked behind the ears"
+    }
+   ]
+  },
+  {
+   "id": "bola",
+   "name": "Bola",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her early forties, medium-brown skin, round full face, wide-set eyes with heavy lashes, broad nose, glossy full lips, a voluminous honey-blonde curly wig reaching the shoulders, short and curvy build",
+   "wardrobe": [
+    {
+     "id": "day",
+     "label": "Day visit",
+     "description": "a bright orange and blue ankara print peplum top with a matching fitted skirt, gold bangles and large gold hoop earrings"
+    },
+    {
+     "id": "gala",
+     "label": "Gala gown",
+     "description": "a fitted fuchsia satin gown with puffed sleeves, a chunky gold statement necklace and large gold hoop earrings"
+    }
+   ]
+  },
+  {
+   "id": "ngozi",
+   "name": "Ngozi",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her late thirties, dark-brown skin, long narrow face, small close-set eyes, thin pointed nose, long straight black hair with a blunt fringe, very thin tall build with narrow shoulders",
+   "wardrobe": [
+    {
+     "id": "day",
+     "label": "Day visit",
+     "description": "a white lace blouse with wide sleeves, tailored red trousers and a single-strand pearl necklace"
+    },
+    {
+     "id": "gala",
+     "label": "Gala gown",
+     "description": "a silver metallic halter-neck gown, long crystal drop earrings and a small silver clutch bag"
+    }
+   ]
+  },
+  {
+   "id": "zara",
+   "name": "Madame Zara",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her late fifties, deep brown skin, oval face with high cheekbones and fine smile lines, large dark almond eyes behind round tortoiseshell glasses, soft rounded nose, full lips, silver-grey natural hair cropped very short, medium height, slender upright build",
+   "wardrobe": [
+    {
+     "id": "atelier",
+     "label": "Studio blacks",
+     "description": "a long black tunic over wide black trousers, a red pin cushion strapped to the left wrist, a white tape measure around the neck and a gold wristwatch"
+    },
+    {
+     "id": "home",
+     "label": "At home",
+     "description": "a flowing indigo adire kaftan with gold embroidery at the neckline and small gold stud earrings"
+    },
+    {
+     "id": "show",
+     "label": "Show night",
+     "description": "an ivory and gold aso-oke wrapper and blouse with a matching sculpted gele head tie and a coral bead necklace"
+    }
+   ]
+  },
+  {
+   "id": "zara-young",
+   "name": "Young Zara",
+   "role": "Flashback",
+   "anchor": "Nigerian woman in her late twenties, deep brown skin, oval face with high cheekbones, large dark almond eyes with faint shadows beneath them, soft rounded nose, full lips, black natural hair in short neat twists, medium height, slender build, a thimble on one finger",
+   "wardrobe": [
+    {
+     "id": "work",
+     "label": "Sewing clothes",
+     "description": "a simple white cotton blouse and a faded floral wrapper tied at the waist, a cloth tape measure around the neck, bare feet"
+    }
+   ]
+  },
+  {
+   "id": "sade",
+   "name": "Sade",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her late thirties, medium-brown skin, heart-shaped face, bright round eyes, small nose, a wide smile with a slight gap between the front teeth, long thin black box braids gathered into a high ponytail, petite build",
+   "wardrobe": [
+    {
+     "id": "blacks",
+     "label": "Stylist blacks",
+     "description": "a fitted black turtleneck, black tailored trousers, black flat shoes and a slim gold watch"
+    }
+   ]
+  },
+  {
+   "id": "marcus",
+   "name": "Marcus",
+   "role": "Supporting",
+   "anchor": "Nigerian man in his early fifties, dark-brown skin, square jaw, broad forehead, deep-set serious eyes, wide nose, clean-shaven head, a short neatly trimmed beard flecked with grey, tall with broad shoulders and a solid build",
+   "wardrobe": [
+    {
+     "id": "tux",
+     "label": "Tuxedo",
+     "description": "a black tuxedo with satin lapels, a white dress shirt, a black bow tie and gold cufflinks"
+    }
+   ]
+  },
+  {
+   "id": "grace",
+   "name": "Mrs. Grace",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her mid-fifties, dark-brown skin, round soft face with deep laugh lines, gentle heavy-lidded eyes, broad nose, greying black hair in neat cornrows running straight back, short sturdy build with slightly rounded shoulders, hands with visibly worn knuckles",
+   "wardrobe": [
+    {
+     "id": "uniform",
+     "label": "Cleaner tunic",
+     "description": "a pale blue cleaner's tunic with white piping over navy trousers and black rubber-soled shoes"
+    },
+    {
+     "id": "best",
+     "label": "Sunday best",
+     "description": "a purple lace wrapper and blouse with a matching gele head tie, small gold earrings and low-heeled cream shoes"
+    }
+   ]
+  },
+  {
+   "id": "emeka",
+   "name": "Mr. Emeka",
+   "role": "Supporting",
+   "anchor": "Nigerian man in his late fifties, very dark skin, long lean face with hollow cheeks, kind tired eyes, prominent nose, short grey hair receding at the temples, a thin grey moustache, tall and lean with a slightly stooped posture",
+   "wardrobe": [
+    {
+     "id": "uniform",
+     "label": "Driver uniform",
+     "description": "a white short-sleeved driver's shirt with epaulettes, black trousers and polished black shoes"
+    },
+    {
+     "id": "best",
+     "label": "Sunday best",
+     "description": "a sky-blue embroidered senator-style tunic with matching trousers, a red traditional cap and black leather sandals"
+    }
+   ]
+  },
+  {
+   "id": "comfort",
+   "name": "Comfort",
+   "role": "Supporting",
+   "anchor": "Nigerian woman in her early forties, medium-dark brown skin, heart-shaped face, large soft eyes, small flat nose, dimpled cheeks, shoulder-length black twists tied at the nape of the neck, medium height, full-figured build",
+   "wardrobe": [
+    {
+     "id": "uniform",
+     "label": "Nanny tunic",
+     "description": "a mint-green short-sleeved nanny tunic, grey trousers, white canvas shoes and a small oval silver locket on a thin chain"
+    },
+    {
+     "id": "best",
+     "label": "Sunday best",
+     "description": "a yellow and green ankara print wrap dress with a matching headscarf and the same small oval silver locket on a thin chain"
+    }
+   ]
+  }
+ ],
+ "locations": [
+  {
+   "id": "gala-hall",
+   "name": "Gala ballroom",
+   "anchor": "Grand hotel ballroom with a sweeping white marble staircase and gold balustrade at one end, three tiered crystal chandeliers, cream walls with gilded mouldings, round tables in ivory linen with tall white floral centrepieces, a polished dark wood floor"
+  },
+  {
+   "id": "gala-corridor",
+   "name": "Ballroom corridor",
+   "anchor": "Quiet side corridor beside a hotel ballroom, cream panelled walls, burgundy carpet with a gold border, brass wall sconces, a tall arched window with heavy gold drapes, a marble console table holding a large vase of white lilies"
+  },
+  {
+   "id": "vivienne-bedroom",
+   "name": "Vivienne's bedroom",
+   "anchor": "Very large modern master bedroom, king bed with a tufted cream velvet headboard and white linen, floor-to-ceiling windows with sheer curtains, a mirrored wardrobe wall, pale marble floor, a gold-framed vanity table crowded with perfume bottles and jewellery boxes"
+  },
+  {
+   "id": "vivienne-living",
+   "name": "Vivienne's living room",
+   "anchor": "Opulent double-height living room, white marble floor, curved cream sofas, a glass coffee table with gold legs, an oversized abstract painting in gold and black, a crystal chandelier, tall arched windows, a long glossy dark dining table at the far end"
+  },
+  {
+   "id": "vivienne-kitchen",
+   "name": "Vivienne's kitchen",
+   "anchor": "Large glossy modern kitchen, white handleless cabinets, a black marble island with three gold bar stools, built-in steel ovens, a steel water dispenser beside the fridge, glass pendant lights, grey tiled floor"
+  },
+  {
+   "id": "vivienne-bathroom",
+   "name": "Vivienne's bathroom",
+   "anchor": "Spacious luxury bathroom, white marble with grey veins on the walls and floor, a freestanding oval bathtub, a double vanity with gold taps and a wide backlit mirror, a glass walk-in shower, a blue plastic bucket and scrubbing brush on the floor"
+  },
+  {
+   "id": "adaeze-room",
+   "name": "Adaeze's small room",
+   "anchor": "Small single room in a modest Lagos compound, pale green walls with peeling patches, a thin mattress on a low wooden frame with a faded floral sheet, one louvre window with a blue curtain, a small wooden table and stool, a cracked mirror on a nail, bare cement floor"
+  },
+  {
+   "id": "compound",
+   "name": "Compound yard",
+   "anchor": "Modest single-storey Lagos compound, a row of rooms under a rusted corrugated roof, cream walls stained at the base, blue wooden doors, a concrete yard with a water tap and plastic buckets, a clothes line, a narrow metal gate onto an untarred street"
+  },
+  {
+   "id": "zara-mansion",
+   "name": "Eze family sitting room",
+   "anchor": "Elegant sitting room in a large family home, high ceiling, cream walls hung with framed fashion sketches, deep teal velvet sofas, a carved dark-wood coffee table, brass floor lamps, a handwoven patterned rug, tall French windows onto a garden and driveway"
+  },
+  {
+   "id": "zara-atelier",
+   "name": "Zara's atelier",
+   "anchor": "Spacious fashion atelier, white brick walls, long oak cutting tables covered with pattern paper and scissors, rows of dress forms, shelves of fabric bolts in every colour, industrial sewing machines beside tall factory windows, a pinboard wall of sketches, polished concrete floor"
+  },
+  {
+   "id": "old-sewing-room",
+   "name": "Zara's first room",
+   "anchor": "Tiny bare room from decades ago, unpainted cement walls, one small window with a wooden shutter, a black manual treadle sewing machine on a scarred wooden table, a wooden stool, a single hanging bulb, fabric scraps piled in a raffia basket"
+  },
+  {
+   "id": "runway-hall",
+   "name": "Runway hall",
+   "anchor": "Large modern event hall set for a fashion show, a long raised white runway down the centre, rows of gold chiavari chairs on both sides, black draped walls, a heavy white backstage curtain at the far end, a ceiling rig of warm spotlights"
+  },
+  {
+   "id": "show-foyer",
+   "name": "Show foyer",
+   "anchor": "Bright modern foyer of an event venue, glass entrance doors, pale stone floor, a long cream carpet leading inside, tall arrangements of white orchids, brass posts with ivory ropes, recessed ceiling lights"
+  },
+  {
+   "id": "lagos-street",
+   "name": "Residential street",
+   "anchor": "Quiet residential Lagos street, cracked tarmac with sandy edges, high cream compound walls topped with wire, black iron gates, a mango tree overhanging one wall, a parked dark saloon car, tangled overhead power lines"
+  },
+  {
+   "id": "training-center",
+   "name": "Training centre",
+   "anchor": "Plain community training room, pale yellow walls, rows of wooden desks each holding a manual sewing machine, a chalkboard, ceiling fans, louvre windows, shelves of folded ankara fabric and thread cones, worn linoleum floor"
+  }
+ ],
+ "acts": [
+  {
+   "title": "Act 1: The Staircase",
+   "scenes": [
+    {
+     "from": 1,
+     "to": 2,
+     "location": "vivienne-living",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "day"
+      },
+      {
+       "id": "ngozi",
+       "wardrobe": "day"
+      }
+     ],
+     "action": "Adaeze kneels scrubbing the white marble floor while Vivienne, Bola and Ngozi stand behind her laughing with wine glasses in their hands",
+     "emotion": "Adaeze calm and composed, the three women smirking",
+     "shot": "Wide shot",
+     "lighting": "bright late-morning daylight through tall arched windows",
+     "motion": "Adaeze scrubs in slow circles as the women laugh, camera pushes in slowly toward Adaeze"
+    },
+    {
+     "from": 3,
+     "to": 4,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Seen from behind, Adaeze stands in the open ballroom doorway facing a hall of guests who lower their heads",
+     "emotion": "upright, still, unhurried",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Guests lower their eyes one by one, camera glides forward past Adaeze's shoulder"
+    },
+    {
+     "from": 5,
+     "to": 7,
+     "location": "zara-atelier",
+     "characters": [],
+     "action": "An ivory beaded gown glows on a dress form beside an open sketchbook and a spool of gold thread on the cutting table",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "dusk, one warm lamp with deep soft shadows",
+     "motion": "Dust drifts through the light, camera travels slowly across the beadwork"
+    },
+    {
+     "from": 8,
+     "to": 9,
+     "location": "gala-hall",
+     "characters": [],
+     "action": "The empty ballroom glitters before the guests arrive, chandeliers lit and every table set",
+     "emotion": "",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Chandelier crystals shimmer, camera rises slowly from the tables toward the staircase"
+    },
+    {
+     "from": 10,
+     "to": 11,
+     "location": "gala-hall",
+     "characters": [],
+     "action": "A crowd of elegantly dressed guests turn toward the entrance with their drinks held in mid-air and their mouths half open",
+     "emotion": "frozen surprise",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Heads turn one after another, camera tracks slowly along the stunned faces"
+    },
+    {
+     "from": 12,
+     "to": 12,
+     "location": "gala-hall",
+     "characters": [],
+     "action": "Wealthy guests in expensive suits and shining dresses fill the ballroom around the round tables",
+     "emotion": "proud, self-assured postures",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Guests mingle and raise glasses, camera drifts slowly sideways across the room"
+    },
+    {
+     "from": 13,
+     "to": 14,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Vivienne stands near the front table holding a glass of champagne with her chin raised",
+     "emotion": "cold, poised, a superior half-smile",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne lifts the glass slightly and surveys the room, camera holds steady"
+    },
+    {
+     "from": 15,
+     "to": 17,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "ngozi",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Bola and Ngozi stand close on either side of Vivienne, leaning in to whisper behind their hands",
+     "emotion": "mocking smiles and sideways glances",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The two friends lean in and giggle, camera eases forward"
+    },
+    {
+     "from": 18,
+     "to": 20,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Vivienne turns toward the staircase and her hand freezes with the champagne glass halfway to her lips",
+     "emotion": "eyes wide, breath caught",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Her head turns then stops dead, camera pushes in on her eyes"
+    },
+    {
+     "from": 21,
+     "to": 23,
+     "location": "vivienne-bathroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Adaeze bends low scrubbing the bathroom floor tiles with a brush while Vivienne walks past without looking at her",
+     "emotion": "Adaeze focused and quiet, Vivienne indifferent",
+     "shot": "Medium shot",
+     "lighting": "cool pale early-morning light",
+     "motion": "Vivienne walks through the frame as Adaeze keeps scrubbing, camera stays low and still"
+    },
+    {
+     "from": 24,
+     "to": 29,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze stands calmly at the top of the grand marble staircase in the ivory beaded gown, one hand resting on the gold balustrade",
+     "emotion": "serene, shoulders back",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The beads catch the chandelier light as she stands still, camera rises slowly up the staircase toward her"
+    },
+    {
+     "from": 30,
+     "to": 35,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze's face in soft light, her hair swept neatly back and her small pearl earrings catching the glow",
+     "emotion": "steady gaze, the faintest knowing smile",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "She blinks slowly and lifts her chin, camera moves in very gently"
+    },
+    {
+     "from": 36,
+     "to": 39,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Over the shoulders of Vivienne and Bola, Bola grips Vivienne's arm as they stare up at Adaeze descending the staircase",
+     "emotion": "Vivienne speechless with her lips parted, Bola alarmed",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Adaeze descends step by step in the distance, camera holds behind the two women"
+    },
+    {
+     "from": 40,
+     "to": 47,
+     "location": "gala-hall",
+     "characters": [],
+     "action": "Guests lean toward each other whispering while a woman near the front covers her mouth with her hand",
+     "emotion": "astonished, wide-eyed",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Whispers pass from guest to guest, camera slides slowly along the group"
+    },
+    {
+     "from": 48,
+     "to": 56,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "A slim man in a velvet dinner jacket leans in to study the tiny glass beads on the sleeve of Adaeze's gown",
+     "emotion": "awed recognition",
+     "shot": "Detail shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "His eyes follow the beadwork as the beads sparkle, camera moves slowly along the sleeve"
+    },
+    {
+     "from": 57,
+     "to": 62,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "plain"
+      }
+     ],
+     "action": "Adaeze stands awkwardly alone just inside the ballroom doors in a plain cheap dress, clutching a small worn handbag while nearby guests smirk",
+     "emotion": "shoulders hunched, eyes lowered, out of place",
+     "shot": "Wide shot",
+     "lighting": "the same chandelier light but hazy and slightly washed out, like something imagined",
+     "motion": "Guests glance and turn away smiling, camera pulls back slowly to leave her small in the frame"
+    },
+    {
+     "from": 63,
+     "to": 71,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Bola whispers urgently into Vivienne's ear while Vivienne grips her champagne glass and stares straight ahead",
+     "emotion": "Vivienne rigid, forcing a breath, fear in her eyes",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne swallows and breathes in, camera holds tight on her face"
+    },
+    {
+     "from": 72,
+     "to": 74,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "The crowd parts into an aisle as Adaeze walks slowly across the ballroom floor straight toward Vivienne",
+     "emotion": "Adaeze fearless and calm, Vivienne frozen in place",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Guests step back on both sides as Adaeze advances, camera retreats smoothly ahead of her"
+    }
+   ]
+  },
+  {
+   "title": "Act 2: The Invitation",
+   "scenes": [
+    {
+     "from": 75,
+     "to": 82,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "day"
+      },
+      {
+       "id": "ngozi",
+       "wardrobe": "day"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Vivienne holds a sparkling evening gown against herself for Bola and Ngozi while Adaeze folds a cashmere throw at the bed behind them",
+     "emotion": "the three women delighted, Adaeze quiet and attentive",
+     "shot": "Wide shot",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "Vivienne sways with the gown as her friends admire it, camera drifts toward Adaeze in the background"
+    },
+    {
+     "from": 83,
+     "to": 101,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, Vivienne holds out a blank gold-edged invitation card with a sweet smile",
+     "emotion": "Vivienne sugary and sly, Adaeze polite and unreadable",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "Vivienne extends the card and tilts her head, camera holds behind Adaeze"
+    },
+    {
+     "from": 102,
+     "to": 106,
+     "location": "vivienne-living",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "day"
+      },
+      {
+       "id": "ngozi",
+       "wardrobe": "day"
+      }
+     ],
+     "action": "Vivienne, Bola and Ngozi huddle together on the cream sofa laughing behind their hands",
+     "emotion": "gleeful and mocking",
+     "shot": "Medium shot",
+     "lighting": "bright late-morning daylight through tall arched windows",
+     "motion": "The three rock with laughter, camera eases in"
+    },
+    {
+     "from": 107,
+     "to": 112,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze stands completely still beside the bed with the cashmere throw held in both hands",
+     "emotion": "face unchanged, eyes steady and far away",
+     "shot": "Close-up",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "Only her fingers tighten on the throw, camera pushes in slowly"
+    },
+    {
+     "from": 113,
+     "to": 117,
+     "location": "vivienne-living",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "day"
+      }
+     ],
+     "action": "Adaeze carefully wipes the edge of the glass coffee table while Vivienne and Bola watch her from the sofa",
+     "emotion": "Adaeze concentrated, the women appraising her",
+     "shot": "Wide shot",
+     "lighting": "bright late-morning daylight through tall arched windows",
+     "motion": "Adaeze wipes along the table edge, camera tracks slowly sideways"
+    },
+    {
+     "from": 118,
+     "to": 122,
+     "location": "vivienne-kitchen",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Vivienne points sharply toward the door while Adaeze lowers a glass of water from her lips",
+     "emotion": "Vivienne irritated, Adaeze obedient and calm",
+     "shot": "Medium shot",
+     "lighting": "clean cool midday light",
+     "motion": "Adaeze sets the glass down as Vivienne gestures, camera holds steady"
+    },
+    {
+     "from": 123,
+     "to": 129,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze's thumb hovers over a softly glowing phone held in both hands, the folded throw on the bed beside her",
+     "emotion": "hesitant, tense fingers",
+     "shot": "Detail shot",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "Her thumb hovers then presses down, camera moves in on her hands"
+    },
+    {
+     "from": 130,
+     "to": 133,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze stands by the bedroom window with the phone to her ear and her eyes closed",
+     "emotion": "relief and held-back emotion",
+     "shot": "Close-up",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "She closes her eyes and exhales, camera holds on her face"
+    },
+    {
+     "from": 134,
+     "to": 140,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Zara stands among the dress forms with a phone to her ear, one hand resting on a bolt of ivory silk",
+     "emotion": "concerned, then quietly resolved",
+     "shot": "Medium shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Zara listens and nods slowly, camera circles a little around her"
+    }
+   ]
+  },
+  {
+   "title": "Act 3: Who She Really Was",
+   "scenes": [
+    {
+     "from": 141,
+     "to": 144,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Adaeze stands beside Zara in the atelier as Zara adjusts a gown on a dress form",
+     "emotion": "easy closeness, quiet pride",
+     "shot": "Wide shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Zara smooths the fabric and Adaeze smiles at her, camera pulls back to show the whole atelier"
+    },
+    {
+     "from": 145,
+     "to": 147,
+     "location": "old-sewing-room",
+     "characters": [
+      {
+       "id": "zara-young",
+       "wardrobe": "work"
+      }
+     ],
+     "action": "Young Zara bends over a black treadle sewing machine, guiding fabric under the needle late at night",
+     "emotion": "tired eyes, determined set of the jaw",
+     "shot": "Medium shot",
+     "lighting": "night, one warm hanging bulb",
+     "motion": "Her foot works the treadle and the needle rises and falls, camera pushes in slowly"
+    },
+    {
+     "from": 148,
+     "to": 150,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Zara's hands pin the hem of an elaborate gown worn by an elegant client standing on a fitting platform",
+     "emotion": "focused and assured",
+     "shot": "Detail shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Pins slide into the fabric one by one, camera rises along the gown"
+    },
+    {
+     "from": 151,
+     "to": 153,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      }
+     ],
+     "action": "Adaeze sits alone on the teal sofa looking toward the French windows, a closed fashion magazine on her lap",
+     "emotion": "restless and searching",
+     "shot": "Medium shot",
+     "lighting": "warm afternoon light through the French windows",
+     "motion": "She looks from the magazine to the window, camera drifts slowly toward her"
+    },
+    {
+     "from": 154,
+     "to": 158,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Over Zara's shoulder, Adaeze sits facing her on the sofa and leans forward as she speaks",
+     "emotion": "Adaeze earnest, Zara worried",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "warm afternoon light through the French windows",
+     "motion": "Adaeze gestures gently as she talks, camera holds behind Zara"
+    },
+    {
+     "from": 159,
+     "to": 165,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Zara holds both of Adaeze's hands in her own on her lap",
+     "emotion": "tender, reluctant acceptance",
+     "shot": "Close-up",
+     "lighting": "warm afternoon light through the French windows",
+     "motion": "Zara squeezes her daughter's hands, camera moves in on the clasped hands and their faces"
+    },
+    {
+     "from": 166,
+     "to": 168,
+     "location": "vivienne-living",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze mops the white marble floor of the vast living room alone",
+     "emotion": "humble and steady",
+     "shot": "Wide shot",
+     "lighting": "bright late-morning daylight through tall arched windows",
+     "motion": "The mop sweeps back and forth, camera pulls back to show how large the room is"
+    },
+    {
+     "from": 169,
+     "to": 176,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze lies on the thin mattress still in her day clothes with one arm across her forehead, a cup of water on the floor beside her",
+     "emotion": "exhausted, eyes half closed",
+     "shot": "Medium shot",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "Her chest rises and falls slowly, camera sinks gently toward her"
+    },
+    {
+     "from": 177,
+     "to": 182,
+     "location": "vivienne-bedroom",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Vivienne drops a silk blouse onto the floor as she walks away while Adaeze bends to pick up a trail of clothes",
+     "emotion": "Vivienne careless, Adaeze patient",
+     "shot": "Wide shot",
+     "lighting": "bright afternoon daylight through sheer curtains",
+     "motion": "The blouse falls and Adaeze gathers the clothes, camera follows Adaeze"
+    },
+    {
+     "from": 183,
+     "to": 189,
+     "location": "vivienne-living",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "home"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "day"
+      }
+     ],
+     "action": "Over Vivienne's shoulder, Adaeze wipes the long dark dining table while Vivienne gestures toward her and talks to Bola over coffee cups",
+     "emotion": "Vivienne dismissive, Bola amused, Adaeze silent",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "bright late-morning daylight through tall arched windows",
+     "motion": "Vivienne waves a hand toward Adaeze, who keeps wiping, camera holds"
+    },
+    {
+     "from": 190,
+     "to": 194,
+     "location": "vivienne-bathroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze kneels on the marble tiles scrubbing with a brush, soap suds on her hands",
+     "emotion": "jaw set, dignified, enduring",
+     "shot": "Close-up",
+     "lighting": "cool pale early-morning light",
+     "motion": "She scrubs steadily then pauses to breathe, camera stays close on her face"
+    },
+    {
+     "from": 195,
+     "to": 199,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze stands before the cracked mirror on the wall looking straight at her own reflection",
+     "emotion": "resolved, chin lifted",
+     "shot": "Medium shot",
+     "lighting": "soft evening light through the blue curtain",
+     "motion": "She straightens her shoulders, camera moves slowly toward the mirror"
+    }
+   ]
+  },
+  {
+   "title": "Act 4: The Ivory Dress",
+   "scenes": [
+    {
+     "from": 200,
+     "to": 202,
+     "location": "compound",
+     "characters": [
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "A black luxury car is parked at the narrow compound gate as Sade steps out, followed by two assistants and a makeup artist carrying boxes",
+     "emotion": "brisk and purposeful",
+     "shot": "Wide shot",
+     "lighting": "golden early-evening light",
+     "motion": "Car doors open and the team walks into the yard, camera tracks alongside them"
+    },
+    {
+     "from": 203,
+     "to": 219,
+     "location": "compound",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "Sade stands at the blue wooden door holding a long ivory garment case out to Adaeze",
+     "emotion": "Sade warm and respectful, Adaeze touched",
+     "shot": "Medium shot",
+     "lighting": "golden early-evening light",
+     "motion": "Sade offers the case and Adaeze takes it with both hands, camera eases in"
+    },
+    {
+     "from": 220,
+     "to": 225,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "A model in the ivory beaded gown stands at the end of the runway beside Zara while the whole audience rises to applaud",
+     "emotion": "triumphant and radiant",
+     "shot": "Wide shot",
+     "lighting": "bright white runway spotlights",
+     "motion": "The audience stands and claps, camera sweeps slowly down the runway toward them"
+    },
+    {
+     "from": 226,
+     "to": 237,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "Adaeze unzips the garment case on the bed and the ivory beaded gown spills into the light as Sade watches",
+     "emotion": "Adaeze's eyes brimming, one hand pressed to her chest",
+     "shot": "Detail shot",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "The zip opens and the beads catch the light, camera pushes in on the gown"
+    },
+    {
+     "from": 238,
+     "to": 247,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "A makeup artist's hand sweeps a soft brush across Adaeze's cheek as she sits on the wooden stool",
+     "emotion": "eyes closed, relaxed",
+     "shot": "Close-up",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "The brush moves in soft strokes, camera holds close"
+    },
+    {
+     "from": 248,
+     "to": 256,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Over her shoulder, Adaeze studies her half-finished reflection in the cracked wall mirror with the small room visible behind her",
+     "emotion": "reflective and grateful",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "Her eyes move over her reflection, camera drifts slowly toward the mirror"
+    },
+    {
+     "from": 257,
+     "to": 267,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "Sade fastens the back of the ivory gown as Adaeze stands tall in the middle of the small room",
+     "emotion": "Sade proud, Adaeze certain",
+     "shot": "Medium shot",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "Sade closes the last fastening and steps back, camera rises from the hem to Adaeze's face"
+    },
+    {
+     "from": 268,
+     "to": 274,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze holds a small folded handwritten note against her chest, standing beside the blue door in the gown",
+     "emotion": "soft smile, ready",
+     "shot": "Close-up",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "She presses the note to her heart and breathes in, camera moves in gently"
+    }
+   ]
+  },
+  {
+   "title": "Act 5: The Entrance",
+   "scenes": [
+    {
+     "from": 275,
+     "to": 279,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Seen from behind, Adaeze pauses at the top of the staircase as the whole ballroom below turns to look up at her",
+     "emotion": "poised stillness",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Faces turn upward across the room, camera rises slowly over her shoulder"
+    },
+    {
+     "from": 280,
+     "to": 281,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Vivienne stares upward with the champagne glass trembling in her hand",
+     "emotion": "confidence draining into fear",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The glass trembles and her smile fades, camera pushes in"
+    },
+    {
+     "from": 282,
+     "to": 286,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze walks down the marble staircase with one hand lightly lifting the hem of her gown",
+     "emotion": "calm, neither smiling nor frowning",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "She descends at an even pace, camera moves down with her"
+    },
+    {
+     "from": 287,
+     "to": 296,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "ngozi",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Bola stands open-mouthed, Ngozi shrinks half behind another guest, and Vivienne clutches her shaking glass",
+     "emotion": "panic and dread",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The three women glance at each other in alarm, camera closes in slowly"
+    },
+    {
+     "from": 297,
+     "to": 311,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Adaeze stops face to face with Vivienne at the front table while the surrounding guests watch in silence",
+     "emotion": "Adaeze gracious and steady, Vivienne stiff with a forced smile",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Adaeze inclines her head in greeting, camera circles slowly around the two women"
+    },
+    {
+     "from": 312,
+     "to": 322,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Over Vivienne's shoulder, an elderly woman in a gold headwrap reaches toward the beading on Adaeze's gown",
+     "emotion": "the woman amazed, Adaeze composed",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The woman's fingers hover over the beads, camera holds behind Vivienne"
+    },
+    {
+     "from": 323,
+     "to": 328,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze speaks quietly and looks directly ahead, the chandeliers blurred behind her",
+     "emotion": "calm certainty",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "She speaks a few words without hurry, camera moves in slowly"
+    },
+    {
+     "from": 329,
+     "to": 344,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Admiring guests gather in a circle around Adaeze while Bola stands at the edge with a strained smile",
+     "emotion": "guests delighted, Adaeze warm, Bola embarrassed",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Guests lean in to greet Adaeze, camera pulls back to show the circle"
+    }
+   ]
+  },
+  {
+   "title": "Act 6: The Reckoning",
+   "scenes": [
+    {
+     "from": 345,
+     "to": 351,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "bola",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Vivienne turns on Bola beside the front table and points at her as Bola raises both hands",
+     "emotion": "Vivienne furious, Bola pleading",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne jabs a finger and Bola backs away, camera holds"
+    },
+    {
+     "from": 352,
+     "to": 365,
+     "location": "gala-corridor",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "marcus",
+       "wardrobe": "tux"
+      }
+     ],
+     "action": "Marcus leads Vivienne by the elbow into the quiet corridor away from the ballroom",
+     "emotion": "Marcus stern, Vivienne anxious",
+     "shot": "Wide shot",
+     "lighting": "evening, low amber light from brass wall sconces",
+     "motion": "They walk into the corridor and stop, camera follows from behind"
+    },
+    {
+     "from": 366,
+     "to": 373,
+     "location": "gala-corridor",
+     "characters": [
+      {
+       "id": "marcus",
+       "wardrobe": "tux"
+      }
+     ],
+     "action": "Marcus stands beneath a brass wall sconce with his arms folded, looking down slightly",
+     "emotion": "grave disappointment",
+     "shot": "Close-up",
+     "lighting": "evening, low amber light from brass wall sconces",
+     "motion": "He shakes his head slowly, camera holds on his face"
+    },
+    {
+     "from": 374,
+     "to": 382,
+     "location": "gala-corridor",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "marcus",
+       "wardrobe": "tux"
+      }
+     ],
+     "action": "Over Marcus's shoulder, Vivienne looks up at him with wet eyes and her hands clasped in front of her",
+     "emotion": "shame and confusion",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, low amber light from brass wall sconces",
+     "motion": "Vivienne's eyes drop then lift again, camera stays behind Marcus"
+    },
+    {
+     "from": 383,
+     "to": 391,
+     "location": "gala-corridor",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "marcus",
+       "wardrobe": "tux"
+      }
+     ],
+     "action": "Marcus walks away down the corridor as Vivienne stands alone by the arched window with her head bowed",
+     "emotion": "defeated",
+     "shot": "Wide shot",
+     "lighting": "evening, low amber light from brass wall sconces",
+     "motion": "Marcus recedes down the corridor, camera stays with Vivienne"
+    },
+    {
+     "from": 392,
+     "to": 394,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "An older gentleman in a white agbada speaks to Adaeze with open surprise as she answers him gently",
+     "emotion": "curious, Adaeze composed",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "The gentleman spreads his hands in wonder, camera eases in"
+    },
+    {
+     "from": 395,
+     "to": 403,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Vivienne approaches Adaeze in the middle of the ballroom with her hands empty at her sides while guests watch from a distance",
+     "emotion": "Vivienne hesitant and exposed, Adaeze attentive",
+     "shot": "Wide shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne walks the last few steps and stops, camera tracks beside her"
+    },
+    {
+     "from": 404,
+     "to": 410,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Vivienne's eyes fill with tears as she speaks, her lipstick slightly smudged",
+     "emotion": "raw remorse",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "A tear spills over, camera holds very close"
+    },
+    {
+     "from": 411,
+     "to": 418,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Vivienne stands with her head lowered in front of Adaeze, who listens with her hands folded",
+     "emotion": "confession and quiet listening",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne speaks haltingly and looks down, camera drifts slowly around them"
+    },
+    {
+     "from": 419,
+     "to": 422,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Over Vivienne's shoulder, Adaeze looks at her directly",
+     "emotion": "firm without anger",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Adaeze holds her gaze, camera stays behind Vivienne"
+    },
+    {
+     "from": 423,
+     "to": 426,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      }
+     ],
+     "action": "Adaeze speaks with one hand resting lightly over her heart",
+     "emotion": "dignified, steady eyes",
+     "shot": "Close-up",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "She speaks slowly and evenly, camera pushes in a little"
+    },
+    {
+     "from": 427,
+     "to": 432,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Adaeze's hand rests briefly on Vivienne's clasped hands",
+     "emotion": "forgiveness with seriousness",
+     "shot": "Detail shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Adaeze's hand settles then withdraws, camera holds on the hands"
+    },
+    {
+     "from": 433,
+     "to": 442,
+     "location": "gala-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "gown"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "gala"
+      }
+     ],
+     "action": "Adaeze and Vivienne stand side by side at the edge of the ballroom with the guests soft in the background",
+     "emotion": "Vivienne humbled, Adaeze calm",
+     "shot": "Medium shot",
+     "lighting": "evening, warm golden chandelier light",
+     "motion": "Vivienne nods and wipes her cheek, camera pulls back slowly"
+    }
+   ]
+  },
+  {
+   "title": "Act 7: The Small Room",
+   "scenes": [
+    {
+     "from": 443,
+     "to": 449,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze's hands fold her grey work uniform into a small open travel bag on the mattress",
+     "emotion": "careful and grateful",
+     "shot": "Detail shot",
+     "lighting": "soft morning light through the blue curtain",
+     "motion": "She smooths the folded uniform flat, camera lifts from her hands to her face"
+    },
+    {
+     "from": 450,
+     "to": 458,
+     "location": "compound",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Vivienne stands at Adaeze's blue door in a plain dress with her hands clasped as Adaeze opens it",
+     "emotion": "Vivienne humble and nervous, Adaeze surprised",
+     "shot": "Wide shot",
+     "lighting": "clear mid-morning light",
+     "motion": "The door swings open and the two women look at each other, camera holds from the yard"
+    },
+    {
+     "from": 459,
+     "to": 466,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, Vivienne sits on the wooden stool looking slowly around the small room",
+     "emotion": "Vivienne sobered, Adaeze at ease",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "soft morning light through the blue curtain",
+     "motion": "Vivienne's eyes travel over the walls and the mattress, camera holds"
+    },
+    {
+     "from": 467,
+     "to": 471,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze sits upright on the edge of the mattress with her hands in her lap, speaking gently",
+     "emotion": "thoughtful and self-possessed",
+     "shot": "Close-up",
+     "lighting": "soft morning light through the blue curtain",
+     "motion": "She speaks and smiles faintly, camera moves in slowly"
+    },
+    {
+     "from": 472,
+     "to": 479,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Vivienne leans forward on the stool wringing her hands as she talks to Adaeze",
+     "emotion": "ashamed and sincere",
+     "shot": "Medium shot",
+     "lighting": "soft morning light through the blue curtain",
+     "motion": "Vivienne twists her fingers and looks up, camera eases toward her"
+    },
+    {
+     "from": 480,
+     "to": 489,
+     "location": "compound",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, Vivienne stands at the doorway and lifts a hand in a quiet goodbye",
+     "emotion": "wistful and respectful",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "clear mid-morning light",
+     "motion": "Vivienne nods, turns and walks across the yard, camera stays with Adaeze"
+    },
+    {
+     "from": 490,
+     "to": 495,
+     "location": "compound",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      }
+     ],
+     "action": "Adaeze pauses at the compound gate with her travel bag for one last look back at the row of rooms while Vivienne waits beside a car",
+     "emotion": "bittersweet and peaceful",
+     "shot": "Wide shot",
+     "lighting": "clear mid-morning light",
+     "motion": "Adaeze looks back, then turns toward the gate, camera rises slowly over the yard"
+    }
+   ]
+  },
+  {
+   "title": "Act 8: Home",
+   "scenes": [
+    {
+     "from": 496,
+     "to": 505,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Zara wraps Adaeze in a tight embrace in the middle of the sitting room, a travel bag dropped at their feet",
+     "emotion": "tears of relief, eyes closed",
+     "shot": "Medium shot",
+     "lighting": "warm afternoon light through the French windows",
+     "motion": "Zara rocks her daughter gently, camera circles slowly around them"
+    },
+    {
+     "from": 506,
+     "to": 513,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Zara and Adaeze walk slowly between the rows of dress forms, Adaeze trailing her fingers along a bolt of fabric",
+     "emotion": "nostalgic and proud",
+     "shot": "Wide shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "They walk side by side, camera glides backward ahead of them"
+    },
+    {
+     "from": 514,
+     "to": 517,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      }
+     ],
+     "action": "Over Zara's shoulder, Adaeze sits across the cutting table speaking with her hands open",
+     "emotion": "urgent and heartfelt",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Adaeze gestures as she speaks, camera holds behind Zara"
+    },
+    {
+     "from": 518,
+     "to": 519,
+     "location": "lagos-street",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Grace walks alone along the quiet street before sunrise with a small bag on her shoulder",
+     "emotion": "tired but steady",
+     "shot": "Wide shot",
+     "lighting": "blue pre-dawn light with one glowing street lamp",
+     "motion": "Grace walks toward the camera, which retreats slowly"
+    },
+    {
+     "from": 520,
+     "to": 522,
+     "location": "lagos-street",
+     "characters": [
+      {
+       "id": "emeka",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Emeka sits behind the wheel of the parked car, watching the street through the windscreen",
+     "emotion": "patient and weary",
+     "shot": "Close-up",
+     "lighting": "flat grey afternoon light",
+     "motion": "He drums a finger on the wheel and waits, camera holds through the windscreen"
+    },
+    {
+     "from": 523,
+     "to": 526,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze's hand smooths a bolt of deep navy fabric unrolled across the cutting table",
+     "emotion": "thoughtful",
+     "shot": "Detail shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Her palm glides over the cloth, camera follows the hand"
+    },
+    {
+     "from": 527,
+     "to": 529,
+     "location": "lagos-street",
+     "characters": [
+      {
+       "id": "comfort",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Comfort walks hand in hand with a small child in a school uniform beside the cream compound wall",
+     "emotion": "loving, a little sad",
+     "shot": "Medium shot",
+     "lighting": "soft early-morning light",
+     "motion": "They walk slowly and Comfort looks down at the child, camera tracks beside them"
+    },
+    {
+     "from": 530,
+     "to": 538,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "home"
+      },
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "Adaeze stands between Zara and Sade at the pinboard wall, pointing to an empty space among the sketches",
+     "emotion": "determined and hopeful",
+     "shot": "Wide shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Adaeze points and turns to them, camera pushes in slowly"
+    },
+    {
+     "from": 539,
+     "to": 553,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Adaeze's pencil draws the first clean line of a dress on a blank sketchbook page",
+     "emotion": "absorbed",
+     "shot": "Detail shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "The pencil moves in one long confident stroke, camera follows the line"
+    },
+    {
+     "from": 554,
+     "to": 558,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Adaeze pins a finished sketch to the centre of the pinboard while Zara watches with her arms folded",
+     "emotion": "quiet excitement and approval",
+     "shot": "Medium shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Adaeze presses the pin in and steps back, camera holds on both women"
+    }
+   ]
+  },
+  {
+   "title": "Act 9: Names First",
+   "scenes": [
+    {
+     "from": 559,
+     "to": 564,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, a young woman in a cleaner's tunic and a middle-aged man in a driver's shirt sit across the cutting table as she writes in a notebook",
+     "emotion": "attentive and respectful",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "The two workers speak in turn as Adaeze writes, camera holds"
+    },
+    {
+     "from": 565,
+     "to": 586,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "grace",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Grace, Emeka and Comfort stand hesitantly just inside the atelier doorway as Adaeze walks toward them with her hand extended and Zara looks on",
+     "emotion": "the workers cautious, Adaeze welcoming",
+     "shot": "Wide shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Adaeze crosses the floor and shakes each hand, camera follows her"
+    },
+    {
+     "from": 587,
+     "to": 590,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Grace sits with her worn hands folded on the table, speaking softly",
+     "emotion": "resigned, gentle dignity",
+     "shot": "Close-up",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Grace looks down at her hands then up, camera moves in slowly"
+    },
+    {
+     "from": 591,
+     "to": 593,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "emeka",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Emeka sits at the table with his car keys resting in front of him, speaking with a faint tired smile",
+     "emotion": "wry and weary",
+     "shot": "Medium shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Emeka turns the keys over once as he talks, camera holds"
+    },
+    {
+     "from": 594,
+     "to": 596,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "comfort",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Comfort touches the small silver locket at her neck as she speaks",
+     "emotion": "aching, eyes glistening",
+     "shot": "Close-up",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Her fingers close around the locket, camera pushes in"
+    },
+    {
+     "from": 597,
+     "to": 604,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, she sketches a dress with clean straight lines while Zara points at the page",
+     "emotion": "absorbed and inspired",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "The pencil moves as Zara's finger traces a line, camera holds on the page"
+    },
+    {
+     "from": 605,
+     "to": 613,
+     "location": "zara-atelier",
+     "characters": [],
+     "action": "A seamstress's hands stitch tiny glass beads onto the crisp white collar of a pale blue dress on a dress form",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Needle and thread pull a bead tight, camera moves along the collar"
+    },
+    {
+     "from": 614,
+     "to": 618,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Zara opens a tailored jacket to show Adaeze the lining embroidered with tiny golden handprints",
+     "emotion": "tender wonder",
+     "shot": "Medium shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Zara lifts the jacket front and Adaeze leans in, camera eases closer"
+    },
+    {
+     "from": 619,
+     "to": 625,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "comfort",
+       "wardrobe": "uniform"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Comfort runs her fingertips over the golden handprints inside the jacket as Adaeze holds it open for her",
+     "emotion": "moved, a tearful smile",
+     "shot": "Close-up",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Comfort traces one small handprint, camera holds on her face and hand"
+    },
+    {
+     "from": 626,
+     "to": 630,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "A flowing gown in warm saffron and terracotta fabric hangs on a dress form as Adaeze drapes its skirt for Zara",
+     "emotion": "admiring",
+     "shot": "Wide shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "The skirt settles into soft folds, camera circles the dress form"
+    },
+    {
+     "from": 631,
+     "to": 635,
+     "location": "zara-atelier",
+     "characters": [],
+     "action": "A sharply tailored deep navy coat-dress with clean lines and brass buttons stands on a dress form by the factory windows",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Light slides across the brass buttons, camera rises slowly up the garment"
+    },
+    {
+     "from": 636,
+     "to": 646,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "sade",
+       "wardrobe": "blacks"
+      }
+     ],
+     "action": "Adaeze shows Sade a handwritten list in a ledger on the cutting table, tapping the page",
+     "emotion": "insistent and generous",
+     "shot": "Medium shot",
+     "lighting": "warm late-afternoon light through tall factory windows",
+     "motion": "Adaeze taps the list and Sade nods, camera holds"
+    },
+    {
+     "from": 647,
+     "to": 650,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Late at night, seamstresses work at the sewing machines while Adaeze and Zara check a garment together",
+     "emotion": "tired and focused",
+     "shot": "Wide shot",
+     "lighting": "night, warm work lamps against dark windows",
+     "motion": "Machines hum and hands guide fabric, camera drifts down the row of tables"
+    },
+    {
+     "from": 651,
+     "to": 656,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Over Zara's shoulder, Adaeze marks the front row on a seating plan spread across the table",
+     "emotion": "resolute",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "night, warm work lamps against dark windows",
+     "motion": "Adaeze circles the front row with a pencil, camera holds on the plan"
+    },
+    {
+     "from": 657,
+     "to": 664,
+     "location": "lagos-street",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Grace stands at a black iron gate holding an ivory envelope tied with a gold ribbon in both hands",
+     "emotion": "disbelief turning to joy",
+     "shot": "Close-up",
+     "lighting": "warm late-afternoon light",
+     "motion": "Grace looks from the envelope up to the sky and smiles, camera pushes in"
+    }
+   ]
+  },
+  {
+   "title": "Act 10: The Invisible Line",
+   "scenes": [
+    {
+     "from": 665,
+     "to": 668,
+     "location": "show-foyer",
+     "characters": [],
+     "action": "Elegant guests stream through the glass doors and along the cream carpet past the white orchids",
+     "emotion": "anticipation",
+     "shot": "Wide shot",
+     "lighting": "evening, bright warm recessed lighting",
+     "motion": "Guests walk in chatting, camera glides forward with them"
+    },
+    {
+     "from": 669,
+     "to": 670,
+     "location": "runway-hall",
+     "characters": [],
+     "action": "Ivory ribbons are tied to the gold front-row chairs beside the white runway, with framed portraits of workers on the black wall behind",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "house lights half up, warm and quiet before the show",
+     "motion": "A ribbon stirs slightly, camera moves along the row of chairs"
+    },
+    {
+     "from": 671,
+     "to": 677,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Grace, Emeka and Comfort stand before the ribboned front-row chairs looking at one another in disbelief",
+     "emotion": "shy and overwhelmed",
+     "shot": "Medium shot",
+     "lighting": "house lights half up, warm and quiet before the show",
+     "motion": "Comfort touches a ribbon and they slowly sit, camera eases in"
+    },
+    {
+     "from": 678,
+     "to": 685,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Over Emeka's shoulder, Adaeze greets Grace at the front row and clasps her hand",
+     "emotion": "warm and grateful",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "house lights half up, warm and quiet before the show",
+     "motion": "Adaeze bends to greet them, camera holds behind Emeka"
+    },
+    {
+     "from": 686,
+     "to": 694,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Grace sits in the front row with one hand pressed to her chest",
+     "emotion": "humbled, tears gathering",
+     "shot": "Close-up",
+     "lighting": "house lights half up, warm and quiet before the show",
+     "motion": "Grace breathes in and blinks back tears, camera moves in slowly"
+    },
+    {
+     "from": 695,
+     "to": 701,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "A model walks out on the runway in a refined pale blue dress with a beaded white collar as Grace watches from the front row",
+     "emotion": "quiet dignity",
+     "shot": "Wide shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "The model walks toward the camera as heads turn, camera retreats along the runway"
+    },
+    {
+     "from": 702,
+     "to": 706,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Tears run down Grace's cheeks as Emeka rests a hand on her shoulder",
+     "emotion": "overcome and joyful",
+     "shot": "Close-up",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Grace presses her fingers to her lips, camera holds close"
+    },
+    {
+     "from": 707,
+     "to": 709,
+     "location": "runway-hall",
+     "characters": [],
+     "action": "A model at the end of the runway turns and opens her tailored jacket to reveal a lining of tiny golden handprints catching the light",
+     "emotion": "",
+     "shot": "Medium shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "The model turns and the lining flashes gold, camera pushes in on the lining"
+    },
+    {
+     "from": 710,
+     "to": 710,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Over Emeka's shoulder, a model in the sharp navy coat-dress strides past as he straightens in his front-row seat",
+     "emotion": "pride, back straight",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "The model passes and Emeka lifts his chin, camera holds behind him"
+    },
+    {
+     "from": 711,
+     "to": 720,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Adaeze and Zara stand before the wall of framed worker portraits, Adaeze pointing to one of an elderly driver",
+     "emotion": "reverent",
+     "shot": "Medium shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Adaeze points and Zara nods slowly, camera slides along the portraits"
+    },
+    {
+     "from": 721,
+     "to": 724,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Grace, Emeka and Comfort stand together under a spotlight as the audience applauds them",
+     "emotion": "honoured and emotional",
+     "shot": "Wide shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "The audience claps and the three clasp hands, camera rises slowly"
+    },
+    {
+     "from": 725,
+     "to": 732,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Grace stands before a large framed portrait of herself as Adaeze gestures toward it",
+     "emotion": "astonished",
+     "shot": "Medium shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Grace steps closer to the portrait, camera eases in behind her"
+    },
+    {
+     "from": 733,
+     "to": 738,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Comfort gazes at her own framed portrait with her fingers closed around her silver locket",
+     "emotion": "a trembling smile",
+     "shot": "Close-up",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Her grip tightens on the locket, camera holds on her face"
+    },
+    {
+     "from": 739,
+     "to": 743,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Emeka stands tall before his framed portrait as Adaeze rests a hand on his arm",
+     "emotion": "dignified and moved",
+     "shot": "Medium shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Emeka nods slowly at his portrait, camera drifts sideways"
+    },
+    {
+     "from": 744,
+     "to": 757,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Behind the white backstage curtain, Zara holds Adaeze's face in her hands as light from the runway spills through the gap",
+     "emotion": "pride and joyful tears",
+     "shot": "Close-up",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Zara brushes a tear from her daughter's cheek, camera moves in gently"
+    },
+    {
+     "from": 758,
+     "to": 769,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "The workers in the front row rise to their feet as the final model passes in a sweeping gown and the audience applauds them",
+     "emotion": "elated",
+     "shot": "Wide shot",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "The whole room stands and claps, camera sweeps down the runway"
+    },
+    {
+     "from": 770,
+     "to": 771,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Adaeze wipes a tear from her cheek at the side of the runway with Zara's arm around her shoulders",
+     "emotion": "bittersweet gratitude",
+     "shot": "Close-up",
+     "lighting": "house lights dimmed, warm white spotlights on the runway",
+     "motion": "Adaeze laughs softly through tears, camera holds"
+    },
+    {
+     "from": 772,
+     "to": 773,
+     "location": "vivienne-bathroom",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "uniform"
+      }
+     ],
+     "action": "Adaeze kneels alone scrubbing the marble bathroom floor, seen through the half-open door",
+     "emotion": "quiet endurance",
+     "shot": "Wide shot",
+     "lighting": "cool pale early-morning light",
+     "motion": "She scrubs slowly, camera pulls back through the doorway"
+    }
+   ]
+  },
+  {
+   "title": "Act 11: After the Applause",
+   "scenes": [
+    {
+     "from": 774,
+     "to": 781,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Adaeze stands beside a displayed garment speaking with two admiring guests",
+     "emotion": "gracious",
+     "shot": "Medium shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Adaeze gestures to the garment as the guests nod, camera eases in"
+    },
+    {
+     "from": 782,
+     "to": 786,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Grace pulls Adaeze into a motherly hug",
+     "emotion": "proud and affectionate",
+     "shot": "Close-up",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Grace pats Adaeze's back, camera holds close"
+    },
+    {
+     "from": 787,
+     "to": 792,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Adaeze holds both of Comfort's hands as they smile at each other",
+     "emotion": "glowing",
+     "shot": "Medium shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Comfort laughs and squeezes her hands, camera drifts around them"
+    },
+    {
+     "from": 793,
+     "to": 800,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Over Adaeze's shoulder, Emeka shakes her hand with both of his, standing very straight",
+     "emotion": "honoured",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Emeka bows his head slightly as they shake hands, camera holds"
+    },
+    {
+     "from": 801,
+     "to": 802,
+     "location": "runway-hall",
+     "characters": [],
+     "action": "A framed black-and-white portrait of an elderly housekeeper with kind eyes hangs on the black wall under a small spotlight",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "The spotlight glows on the glass, camera moves in slowly"
+    },
+    {
+     "from": 803,
+     "to": 808,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "show"
+      },
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Vivienne stands with Adaeze near the end of the runway, holding her handbag in front of her with both hands",
+     "emotion": "nervous honesty",
+     "shot": "Medium shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Vivienne shifts her grip on the bag as she speaks, camera eases in"
+    },
+    {
+     "from": 809,
+     "to": 815,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Adaeze answers with a calm open expression, the empty runway blurred behind her",
+     "emotion": "serene conviction",
+     "shot": "Close-up",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "She speaks slowly and evenly, camera pushes in a little"
+    },
+    {
+     "from": 816,
+     "to": 822,
+     "location": "training-center",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "modest"
+      }
+     ],
+     "action": "Vivienne crouches beside a young woman at a sewing machine, awkwardly helping her guide the fabric",
+     "emotion": "uncertain but sincere",
+     "shot": "Wide shot",
+     "lighting": "plain flat daylight through louvre windows",
+     "motion": "Vivienne steadies the cloth as the needle runs, camera tracks slowly along the desks"
+    },
+    {
+     "from": 823,
+     "to": 830,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Over Vivienne's shoulder, Adaeze speaks to her gently but firmly",
+     "emotion": "encouraging and measured",
+     "shot": "Over-the-shoulder shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Adaeze nods once as she speaks, camera holds behind Vivienne"
+    },
+    {
+     "from": 831,
+     "to": 837,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "vivienne",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Vivienne clasps Adaeze's hand in both of her own",
+     "emotion": "grateful",
+     "shot": "Detail shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "Vivienne's hands tighten then release, camera holds on the hands"
+    },
+    {
+     "from": 838,
+     "to": 842,
+     "location": "show-foyer",
+     "characters": [
+      {
+       "id": "vivienne",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Vivienne walks alone toward the glass doors of the foyer and glances back once",
+     "emotion": "subdued but lighter",
+     "shot": "Wide shot",
+     "lighting": "late night, soft warm recessed lighting",
+     "motion": "Vivienne walks away and looks back over her shoulder, camera stays still"
+    },
+    {
+     "from": 843,
+     "to": 852,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      },
+      {
+       "id": "grace",
+       "wardrobe": "best"
+      },
+      {
+       "id": "emeka",
+       "wardrobe": "best"
+      },
+      {
+       "id": "comfort",
+       "wardrobe": "best"
+      }
+     ],
+     "action": "Adaeze and Zara wave goodbye as Grace, Emeka and Comfort leave together carrying small ivory gift bags",
+     "emotion": "content, tired joy",
+     "shot": "Medium shot",
+     "lighting": "house lights up, warm and bright after the show",
+     "motion": "The three workers turn and wave back, camera pulls back slowly"
+    },
+    {
+     "from": 853,
+     "to": 857,
+     "location": "runway-hall",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Zara and Adaeze stand arm in arm looking over the empty runway and the rows of chairs",
+     "emotion": "peaceful pride",
+     "shot": "Wide shot",
+     "lighting": "most lights off, one soft spotlight left on the runway",
+     "motion": "They stand still as the last lights dim, camera rises slowly above them"
+    }
+   ]
+  },
+  {
+   "title": "Act 12: The Girl Who Came Back",
+   "scenes": [
+    {
+     "from": 858,
+     "to": 870,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      },
+      {
+       "id": "zara",
+       "wardrobe": "show"
+      }
+     ],
+     "action": "Zara sinks onto the teal sofa as Adaeze kneels to slip off her mother's shoes",
+     "emotion": "exhausted and loving",
+     "shot": "Medium shot",
+     "lighting": "late night, low warm lamp light",
+     "motion": "Zara leans back and closes her eyes, camera eases in"
+    },
+    {
+     "from": 871,
+     "to": 878,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Adaeze lifts a new pencil sketch of a gown from the cutting table, a line of handwriting at its corner",
+     "emotion": "surprised and touched",
+     "shot": "Detail shot",
+     "lighting": "night, a single desk lamp",
+     "motion": "She lifts the page into the lamp light, camera moves in on the sketch"
+    },
+    {
+     "from": 879,
+     "to": 881,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      }
+     ],
+     "action": "Adaeze stands at the French windows looking out at a row of polished cars on the drive",
+     "emotion": "pensive",
+     "shot": "Wide shot",
+     "lighting": "warm afternoon light through the French windows",
+     "motion": "She rests a hand on the window frame, camera pushes in slowly from behind"
+    },
+    {
+     "from": 882,
+     "to": 884,
+     "location": "adaeze-room",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "simple"
+      }
+     ],
+     "action": "Adaeze sits on the thin mattress rubbing her aching bare feet",
+     "emotion": "worn out but unbroken",
+     "shot": "Medium shot",
+     "lighting": "dim warm light from a single bulb, night",
+     "motion": "She kneads one foot and exhales, camera holds"
+    },
+    {
+     "from": 885,
+     "to": 888,
+     "location": "zara-atelier",
+     "characters": [],
+     "action": "The ivory beaded gown and the grey cleaner's uniform hang side by side on a clothes rail",
+     "emotion": "",
+     "shot": "Detail shot",
+     "lighting": "night, a single desk lamp",
+     "motion": "Both garments sway very slightly, camera moves slowly from one to the other"
+    },
+    {
+     "from": 889,
+     "to": 895,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "launch"
+      }
+     ],
+     "action": "Adaeze holds the sketch against her chest with her eyes lifted",
+     "emotion": "gratitude and clarity",
+     "shot": "Close-up",
+     "lighting": "night, a single desk lamp",
+     "motion": "She closes her eyes and smiles, camera moves in gently"
+    },
+    {
+     "from": 896,
+     "to": 901,
+     "location": "zara-mansion",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "heiress"
+      }
+     ],
+     "action": "Adaeze hands a glass of water to an elderly housekeeper and gestures for her to sit on the teal sofa",
+     "emotion": "kind and attentive",
+     "shot": "Medium shot",
+     "lighting": "soft morning light through the French windows",
+     "motion": "The housekeeper accepts the glass with a surprised smile, camera drifts around them"
+    },
+    {
+     "from": 902,
+     "to": 904,
+     "location": "zara-atelier",
+     "characters": [
+      {
+       "id": "adaeze",
+       "wardrobe": "atelier"
+      }
+     ],
+     "action": "Adaeze stands at the tall factory windows at sunrise with a soft smile",
+     "emotion": "at peace",
+     "shot": "Close-up",
+     "lighting": "sunrise, soft gold light through tall factory windows",
+     "motion": "Sunlight rises across her face, camera holds"
+    },
+    {
+     "from": 905,
+     "to": 906,
+     "location": "zara-atelier",
+     "characters": [],
+     "action": "The ivory beaded gown stands on a dress form in the centre of the quiet atelier",
+     "emotion": "",
+     "shot": "Wide shot",
+     "lighting": "sunrise, soft gold light through tall factory windows",
+     "motion": "Morning light spreads across the floor, camera pulls back slowly"
+    }
+   ]
+  }
+ ]
+}

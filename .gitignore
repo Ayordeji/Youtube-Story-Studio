@@ -1,0 +1,7 @@
+# Big, regenerable or private: keep out of GitHub
+projects/
+node_modules/
+bin/
+.DS_Store
+*.log
+.env

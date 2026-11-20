@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Story Studio</title>
+<style>
+  :root {
+    --bg: #111317; --panel: #191c22; --panel2: #20242c; --line: #2c313b; --text: #e7e9ee; --muted: #949baa;
+    --accent: #e9b44c; --accent-ink: #1b1403; --good: #5fbf8a; --warn: #e0a84a; --bad: #e2706b; --radius: 10px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
+  header { display: flex; align-items: center; gap: 14px; padding: 12px 22px; border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 0; z-index: 20; flex-wrap: wrap; }
+  header h1 { font-size: 16px; margin: 0; letter-spacing: .02em; }
+  header h1 span { color: var(--accent); }
+  .spacer { flex: 1; }
+  .dot { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .dot i { width: 8px; height: 8px; border-radius: 50%; background: var(--bad); display: inline-block; }
+  .dot.ok i { background: var(--good); }
+  nav { display: flex; gap: 4px; padding: 10px 22px 0; border-bottom: 1px solid var(--line); background: var(--panel); position: sticky; top: 53px; z-index: 19; overflow-x: auto; }
+  nav button { background: none; border: 0; color: var(--muted); padding: 9px 14px; font: inherit; cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; }
+  nav button.on { color: var(--text); border-bottom-color: var(--accent); }
+  nav button:disabled { opacity: .35; cursor: default; }
+  nav button b { display: inline-block; width: 19px; height: 19px; line-height: 19px; text-align: center; border-radius: 50%; background: var(--panel2); font-size: 11px; margin-right: 6px; }
+  nav button.on b { background: var(--accent); color: var(--accent-ink); }
+  main { max-width: 1240px; margin: 0 auto; padding: 22px; }
+  h2 { font-size: 19px; margin: 0 0 4px; }
+  h3 { font-size: 14px; margin: 0 0 8px; }
+  p.lead { color: var(--muted); margin: 0 0 18px; max-width: 760px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 4px; }
+  input[type=text], input[type=number], textarea, select { width: 100%; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; font: inherit; }
+  textarea { resize: vertical; min-height: 70px; }
+  textarea.tall { min-height: 300px; }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); }
+  button.btn { background: var(--panel2); color: var(--text); border: 1px solid var(--line); border-radius: 7px; padding: 7px 12px; font: inherit; cursor: pointer; }
+  button.btn:hover { border-color: var(--muted); }
+  button.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+  button.btn.small { padding: 4px 9px; font-size: 12px; }
+  button.btn.done { border-color: var(--good); color: var(--good); }
+  button.btn:disabled { opacity: .5; cursor: default; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .muted { color: var(--muted); } .small { font-size: 12px; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 99px; background: var(--panel2); border: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+  .pill.good { color: var(--good); border-color: #2f5a44; } .pill.warn { color: var(--warn); border-color: #5c4a25; }
+  pre.prompt { white-space: pre-wrap; word-break: break-word; background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 10px; margin: 0; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfd4de; max-height: 240px; overflow: auto; }
+  .notice { border-left: 3px solid var(--warn); background: #241f14; padding: 10px 12px; border-radius: 6px; margin: 10px 0; }
+  .notice.bad { border-color: var(--bad); background: #2a1716; }
+  .notice.good { border-color: var(--good); background: #14241b; }
+  .notice ul { margin: 4px 0 0; padding-left: 18px; }
+  .slot { width: 100%; aspect-ratio: 16/9; background: var(--bg); border: 1px dashed var(--line); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 12px; cursor: pointer; overflow: hidden; position: relative; text-align: center; }
+  .slot.square { aspect-ratio: 1; width: 110px; flex: none; }
+  .slot img, .slot video { width: 100%; height: 100%; object-fit: cover; }
+  .slot.over { border-color: var(--accent); color: var(--accent); }
+  .scene { display: grid; grid-template-columns: 250px 1fr; gap: 16px; }
+  .scene .id { font-weight: 700; color: var(--accent); }
+  .narration { color: var(--muted); font-size: 12.5px; margin: 6px 0 10px; border-left: 2px solid var(--line); padding-left: 10px; }
+  .acts { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .acts button.on { border-color: var(--accent); color: var(--accent); }
+  .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .fields .wide { grid-column: 1 / -1; }
+  .bar { height: 8px; background: var(--panel2); border-radius: 99px; overflow: hidden; }
+  .bar > div { height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+  table { width: 100%; border-collapse: collapse; }
+  td, th { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { font-size: 12px; color: var(--muted); font-weight: 500; }
+  audio { height: 30px; width: 240px; }
+  #toast { position: fixed; bottom: 22px; left: 50%; transform: translateX(-50%); background: var(--panel2); border: 1px solid var(--line); padding: 9px 16px; border-radius: 8px; display: none; z-index: 50; max-width: 80vw; }
+  #toast.bad { border-color: var(--bad); }
+  @media (max-width: 800px) { .scene { grid-template-columns: 1fr; } .fields { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Story <span>Studio</span></h1>
+  <select id="projectSelect" style="width:auto;min-width:220px"></select>
+  <button class="btn small" onclick="newProject()">New project</button>
+  <div class="spacer"></div>
+  <span class="dot" id="dotFfmpeg"><i></i>Video compiler</span>
+  <span class="dot" id="dotVoice"><i></i>Narrator</span>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<div id="toast"></div>
+<input type="file" id="filePicker" hidden>
+
+<script>
+const TABS = [['script', 'Script'], ['plan', 'Plan'], ['cast', 'Cast and places'], ['scenes', 'Scenes'], ['narration', 'Narration'], ['compile', 'Compile']];
+const SHOTS = ['Wide shot', 'Medium shot', 'Close-up', 'Over-the-shoulder shot', 'Detail shot'];
+const S = { tab: 'script', project: null, projects: [], health: {}, voices: [], act: 0, mode: 'image', warnings: [], creating: false, job: null, renders: [], openEdit: {} };
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function toast(msg, bad) { const t = $('toast'); t.textContent = msg; t.className = bad ? 'bad' : ''; t.style.display = 'block'; clearTimeout(toast.t); toast.t = setTimeout(() => t.style.display = 'none', bad ? 6000 : 2200); }
+
+async function api(url, opts = {}) {
+  const res = await fetch(url, opts);
+  const type = res.headers.get('content-type') || '';
+  const data = type.includes('json') ? await res.json() : await res.text();
+  if (!res.ok) throw new Error((data && data.error) || 'Something went wrong.');
+  return data;
+}
+const post = (url, body) => api(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body || {}) });
+const pid = () => S.project.id;
+const media = (folder, file) => `/media/${pid()}/${folder}/${encodeURIComponent(file)}`;
+
+// Remembers which prompts you have already copied, on this browser only.
+const copied = {
+  key: () => 'studio-copied-' + (S.project ? S.project.id : ''),
+  get() { try { return JSON.parse(localStorage.getItem(this.key()) || '{}'); } catch { return {}; } },
+  mark(k) { try { const m = this.get(); m[k] = 1; localStorage.setItem(this.key(), JSON.stringify(m)); } catch {} },
+};
+
+async function copyText(text, markKey, btn) {
+  try { await navigator.clipboard.writeText(text); }
+  catch { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove(); }
+  if (markKey) copied.mark(markKey);
+  if (btn) { btn.classList.add('done'); btn.textContent = 'Copied'; }
+  toast('Copied to clipboard');
+}
+
+// ─── Loading ───
+async function boot() {
+  S.health = await api('/api/health').catch(() => ({}));
+  $('dotFfmpeg').className = 'dot' + (S.health.ffmpeg ? ' ok' : '');
+  $('dotVoice').className = 'dot' + (S.health.kokoro || S.health.mac ? ' ok' : '');
+  const v = await api('/api/voices').catch(() => ({ voices: [] }));
+  S.voices = v.voices.filter(x => x.tier !== 'mac' || S.health.mac); S.defaultVoice = v.defaultVoice;
+  await refreshProjects();
+  let last = null; try { last = localStorage.getItem('studio-last'); } catch {}
+  const pick = S.projects.find(p => p.id === last) || S.projects[0];
+  if (pick) await openProject(pick.id); else { S.creating = true; render(); }
+}
+async function refreshProjects() {
+  S.projects = (await api('/api/projects')).projects;
+  const sel = $('projectSelect');
+  sel.innerHTML = S.projects.length ? S.projects.map(p => `<option value="${esc(p.id)}">${esc(p.title)}</option>`).join('') : '<option value="">No projects yet</option>';
+  if (S.project) sel.value = S.project.id;
+}
+$('projectSelect').onchange = e => e.target.value && openProject(e.target.value);
+async function openProject(id) {
+  S.project = (await api('/api/projects/' + id)).project;
+  S.creating = false; S.act = 0; S.warnings = []; S.openEdit = {};
+  try { localStorage.setItem('studio-last', id); } catch {}
+  $('projectSelect').value = id;
+  S.tab = S.project.plan ? 'scenes' : 'plan';
+  render();
+}
+function newProject() { S.creating = true; S.tab = 'script'; render(); }
+function setProject(p) { S.project = p; render(); }
+function go(tab) { S.tab = tab; if (tab === 'compile') loadRenders(); render(); window.scrollTo(0, 0); }
+
+// ─── Rendering ───
+function render() {
+  const y = window.scrollY;
+  const hasProject = !!S.project && !S.creating, hasPlan = hasProject && !!S.project.plan;
+  $('nav').innerHTML = TABS.map(([id, label], i) => {
+    const disabled = (id !== 'script' && !hasProject) || (['cast', 'scenes', 'narration', 'compile'].includes(id) && !hasPlan);
+    return `<button class="${S.tab === id ? 'on' : ''}" ${disabled ? 'disabled' : ''} onclick="go('${id}')"><b>${i + 1}</b>${label}</button>`;
+  }).join('');
+  const views = { script: viewScript, plan: viewPlan, cast: viewCast, scenes: viewScenes, narration: viewNarration, compile: viewCompile };
+  $('main').innerHTML = views[S.tab]();
+  window.scrollTo(0, y);
+}
+
+// 1. Script
+function viewScript() {
+  if (S.creating || !S.project) {
+    return `<h2>Start a new story</h2><p class="lead">Paste the finished narration script exactly as it will be read. The studio never changes your words.</p>
+    <div class="card"><label>Working title</label><input type="text" id="newTitle" placeholder="For example: The Housekeeper's Secret">
+    <label>Script</label><textarea class="tall" id="newScript" placeholder="Paste the full script here"></textarea>
+    <div class="row" style="margin-top:12px"><button class="btn primary" onclick="createProject()">Create project</button>
+    ${S.projects.length ? '<button class="btn" onclick="S.creating=false;go(\'scenes\')">Cancel</button>' : ''}</div></div>`;
+  }
+  const p = S.project;
+  return `<h2>${esc(p.title)}</h2><p class="lead">${p.stats.words.toLocaleString()} words in ${p.stats.sentences} sentences${p.plan ? `, planned as ${p.stats.scenes} scenes in ${p.plan.acts.length} acts` : ''}. About ${Math.round(p.stats.words / 150)} minutes of narration.</p>
+  <div class="card"><label>Title</label><input type="text" value="${esc(p.title)}" onchange="edit('title', null, {title: this.value}).then(refreshProjects)">
+  <div class="row" style="margin-top:12px"><button class="btn" onclick="showScript()">View the script</button>
+  <button class="btn primary" onclick="go('${p.plan ? 'scenes' : 'plan'}')">${p.plan ? 'Go to scenes' : 'Next: plan the visuals'}</button></div>
+  <div id="scriptBox"></div></div>`;
+}
+async function createProject() {
+  try {
+    const r = await post('/api/projects', { title: $('newTitle').value, script: $('newScript').value });
+    S.project = r.project; S.creating = false; await refreshProjects(); S.tab = 'plan';
+    try { localStorage.setItem('studio-last', r.project.id); } catch {}
+    render();
+  } catch (e) { toast(e.message, true); }
+}
+async function showScript() {
+  const r = await api(`/api/projects/${pid()}/script`);
+  $('scriptBox').innerHTML = `<label>Script (read only)</label><textarea class="tall" readonly>${esc(r.script)}</textarea>`;
+}
+
+// 2. Plan
+function viewPlan() {
+  const p = S.project;
+  const warn = S.warnings.length ? `<div class="notice"><b>Imported with ${S.warnings.length} note${S.warnings.length > 1 ? 's' : ''}:</b><ul>${S.warnings.map(w => `<li>${esc(w)}</li>`).join('')}</ul></div>` : '';
+  return `<h2>Plan the visuals</h2><p class="lead">One round trip to Claude or Gemini turns the script into a cast, locations and a scene list. Your narration stays word for word because the AI only returns sentence numbers, never text.</p>
+  ${p.plan ? `<div class="notice good">This story is already planned: ${p.stats.scenes} scenes, ${p.plan.characters.length} characters, ${p.plan.locations.length} locations. Importing a new reply replaces the plan and unlinks uploaded images and narration.</div>` : ''}
+  ${warn}
+  <div class="card"><h3>Step A. Copy the planning prompt</h3>
+  <p class="muted small">It already contains your numbered script. Paste it into a new Claude chat (best for long scripts) or Gemini and send it.</p>
+  <div class="row"><button class="btn primary" onclick="copyPlanner(this)">Copy planning prompt</button>
+  <a href="/api/projects/${pid()}/planner-prompt?download=1"><button class="btn">Download as a .txt file</button></a>
+  <span class="muted small">Use the file if the chat box refuses a paste this long.</span></div></div>
+  <div class="card"><h3>Step B. Paste the reply</h3>
+  <textarea class="tall" id="planText" placeholder='Paste the full reply here. It starts with { and ends with }'></textarea>
+  <div class="row" style="margin-top:12px"><button class="btn primary" onclick="importPlan()">Import plan</button></div></div>`;
+}
+async function copyPlanner(btn) { copyText(await api(`/api/projects/${pid()}/planner-prompt`), null, btn); }
+async function importPlan() {
+  if (S.project.plan && !confirm('Replace the current plan? Uploaded images and narration will be unlinked.')) return;
+  try {
+    const r = await post(`/api/projects/${pid()}/plan`, { text: $('planText').value });
+    S.project = r.project; S.warnings = r.warnings || []; S.act = 0; await refreshProjects();
+    S.tab = S.warnings.length ? 'plan' : 'cast'; render();
+    toast(`Plan imported: ${r.project.stats.scenes} scenes`);
+  } catch (e) { toast(e.message, true); }
+}
+
+// Shared: save an edit
+async function edit(target, id, fields) {
+  try { const r = await post(`/api/projects/${pid()}/edit`, { target, id, fields }); setProject(r.project); }
+  catch (e) { toast(e.message, true); }
+}
+
+// Uploads
+function pickFile(accept, multiple, handler) {
+  const input = $('filePicker'); input.accept = accept; input.multiple = !!multiple; input.value = '';
+  input.onchange = () => input.files.length && handler([...input.files]);
+  input.click();
+}
+async function upload(url, file) {
+  return api(url, { method: 'POST', headers: { 'Content-Type': 'application/octet-stream', 'X-Filename': encodeURIComponent(file.name) }, body: file });
+}
+function dropProps(handlerCall) {
+  return `ondragover="event.preventDefault();this.classList.add('over')" ondragleave="this.classList.remove('over')" ondrop="event.preventDefault();this.classList.remove('over');(${handlerCall})([...event.dataTransfer.files])"`;
+}
+async function uploadRef(kind, id, files) {
+  try { setProject((await upload(`/api/projects/${pid()}/ref/${kind}/${id}`, files[0])).project); toast('Reference saved'); } catch (e) { toast(e.message, true); }
+}
+async function uploadAsset(sceneId, files) {
+  try { setProject((await upload(`/api/projects/${pid()}/asset/${sceneId}`, files[0])).project); } catch (e) { toast(e.message, true); }
+}
+
+// 3. Cast and places
+function viewCast() {
+  const plan = S.project.plan, done = copied.get();
+  const chars = plan.characters.map(c => `<div class="card">
+    <div class="row" style="align-items:flex-start;flex-wrap:nowrap">
+      <div class="slot square" title="Add the reference portrait you generated" onclick="pickFile('image/*', false, f => uploadRef('character','${c.id}',f))" ${dropProps(`f => uploadRef('character','${c.id}',f)`)}>
+        ${c.refImage ? `<img src="${media('refs', c.refImage)}">` : 'Drop the portrait here'}</div>
+      <div style="flex:1;min-width:0">
+        <input type="text" value="${esc(c.name)}" onchange="edit('character','${c.id}',{name:this.value})" style="font-weight:600">
+        <div class="row" style="margin-top:6px"><span class="pill">${esc(c.role)}</span><span class="pill">${sceneCount(c.id, 'character')} scenes</span></div>
+      </div>
+    </div>
+    <label>Locked look (used word for word in every scene with ${esc(c.name)})</label>
+    <textarea onchange="edit('character','${c.id}',{anchor:this.value})">${esc(c.anchor)}</textarea>
+    <label>Outfits (the first is the default)</label>
+    ${c.wardrobe.map((w, i) => `<div style="margin-bottom:8px">
+      <input type="text" value="${esc(w.label)}" style="margin-bottom:4px" onchange="editOutfit('${c.id}',${i},'label',this.value)">
+      <textarea style="min-height:52px" placeholder="Describe this outfit" onchange="editOutfit('${c.id}',${i},'description',this.value)">${esc(w.description)}</textarea></div>`).join('')}
+    <button class="btn small" onclick="addOutfit('${c.id}')">Add outfit</button>
+    <div class="row" style="margin-top:12px">
+      <button class="btn small ${done['ref-p-' + c.id] ? 'done' : ''}" onclick="copyText(charPrompt('${c.id}','portrait'),'ref-p-${c.id}',this)">Copy portrait prompt</button>
+      <button class="btn small ${done['ref-f-' + c.id] ? 'done' : ''}" onclick="copyText(charPrompt('${c.id}','fullBody'),'ref-f-${c.id}',this)">Copy full-body prompt</button>
+    </div></div>`).join('');
+  const locs = plan.locations.map(l => `<div class="card">
+    <div class="slot" style="margin-bottom:10px" onclick="pickFile('image/*', false, f => uploadRef('location','${l.id}',f))" ${dropProps(`f => uploadRef('location','${l.id}',f)`)}>
+      ${l.refImage ? `<img src="${media('refs', l.refImage)}">` : 'Drop the location reference here'}</div>
+    <input type="text" value="${esc(l.name)}" onchange="edit('location','${l.id}',{name:this.value})" style="font-weight:600">
+    <label>Locked look (used word for word in every scene set here, ${sceneCount(l.id, 'location')} scenes)</label>
+    <textarea onchange="edit('location','${l.id}',{anchor:this.value})">${esc(l.anchor)}</textarea>
+    <div class="row" style="margin-top:12px"><button class="btn small ${done['ref-l-' + l.id] ? 'done' : ''}" onclick="copyText(locPrompt('${l.id}'),'ref-l-${l.id}',this)">Copy location prompt</button></div></div>`).join('');
+  return `<h2>Cast and places</h2><p class="lead">This is where consistency is decided. Each locked look below is inserted word for word into every scene prompt, so fix a detail here once and all scenes follow. Generate each portrait in Flow first, drop it here, and attach the same portrait as a reference image in Flow whenever that character appears.</p>
+  <div class="card"><h3>Visual style of the whole film</h3><textarea onchange="edit('style',null,{style:this.value})">${esc(plan.style)}</textarea></div>
+  <div class="row" style="margin:18px 0 10px"><h3 style="margin:0">Characters</h3><button class="btn small" onclick="addItem('character')">Add character</button></div>
+  <div class="grid">${chars}</div>
+  <div class="row" style="margin:18px 0 10px"><h3 style="margin:0">Locations</h3><button class="btn small" onclick="addItem('location')">Add location</button></div>
+  <div class="grid">${locs}</div>
+  <div class="row"><button class="btn primary" onclick="go('scenes')">Next: scene prompts</button></div>`;
+}
+const flatScenes = () => S.project.plan.acts.flatMap(a => a.scenes);
+function sceneCount(id, kind) { return flatScenes().filter(s => kind === 'location' ? s.location === id : s.characters.some(c => c.id === id)).length; }
+const charPrompt = (id, kind) => S.project.plan.characters.find(c => c.id === id).prompts[kind];
+const locPrompt = id => S.project.plan.locations.find(l => l.id === id).prompt;
+function editOutfit(cid, i, key, value) { const c = S.project.plan.characters.find(x => x.id === cid); const w = c.wardrobe.map(o => ({ ...o })); w[i][key] = value; edit('character', cid, { wardrobe: w }); }
+function addOutfit(cid) { const c = S.project.plan.characters.find(x => x.id === cid); edit('character', cid, { wardrobe: [...c.wardrobe, { id: '', label: 'New outfit', description: '' }] }); }
+function addItem(kind) { const name = prompt(kind === 'character' ? 'Character name' : 'Location name'); if (name) edit(kind, 'new', { name }); }
+
+// 4. Scenes
+function viewScenes() {
+  const plan = S.project.plan, done = copied.get();
+  if (S.act >= plan.acts.length) S.act = 0;
+  const act = plan.acts[S.act];
+  const acts = plan.acts.map((a, i) => {
+    const ready = a.scenes.filter(s => s.asset).length;
+    return `<button class="btn small ${i === S.act ? 'on' : ''}" onclick="S.act=${i};render();window.scrollTo(0,0)">${esc(a.title)} <span class="muted">${ready}/${a.scenes.length}</span></button>`;
+  }).join('');
+  const rows = act.scenes.map(sc => {
+    const prompt = sc.prompts[S.mode], key = `${S.mode}-${sc.id}`;
+    const open = S.openEdit[sc.id];
+    const assetView = sc.asset ? (sc.asset.type === 'video' ? `<video src="${media('assets', sc.asset.file)}" muted loop onmouseover="this.play()" onmouseout="this.pause()"></video>` : `<img src="${media('assets', sc.asset.file)}" loading="lazy">`) : `Drop the ${S.mode} for ${sc.id} here<br>or click to choose`;
+    return `<div class="card scene" id="row-${sc.id}">
+      <div><div class="slot" onclick="pickFile('image/*,video/*', false, f => uploadAsset('${sc.id}',f))" ${dropProps(`f => uploadAsset('${sc.id}',f)`)}>${assetView}</div>
+        <div class="row" style="margin-top:8px"><span class="pill ${sc.asset ? 'good' : 'warn'}">${sc.asset ? sc.asset.type + ' added' : 'needs ' + S.mode}</span>${sc.autoSplit ? '<span class="pill warn" title="Split from a longer scene. Check the action still fits these lines.">auto-split</span>' : ''}</div></div>
+      <div style="min-width:0">
+        <div class="row"><span class="id">${sc.id}</span><span class="pill">${esc(sc.shot)}</span><span class="pill">${sc.words} words</span>
+          <span class="muted small">Attach in Flow: ${esc(sc.prompts.references.join(', ') || 'no references')}</span><div class="spacer"></div>
+          <button class="btn small" onclick="S.openEdit['${sc.id}']=!S.openEdit['${sc.id}'];render()">${open ? 'Close' : 'Edit scene'}</button>
+          <button class="btn small ${done[key] ? 'done' : 'primary'}" onclick="copyText(scenePrompt('${sc.id}'),'${key}',this)">${done[key] ? 'Copied' : 'Copy ' + S.mode + ' prompt'}</button></div>
+        <div class="narration">${esc(sc.narration)}</div>
+        ${open ? sceneEditor(sc) : ''}
+        <pre class="prompt">${esc(prompt)}</pre>
+      </div></div>`;
+  }).join('');
+  return `<h2>Scenes</h2><p class="lead">Copy a prompt, generate it in Flow, then drop the result on its scene. Prompts you have copied turn green so you always know where you stopped. If you download files from Flow named with the scene code (for example ${act.scenes[0].id}.png), "Add many files" places them all at once.</p>
+  <div class="row" style="margin-bottom:12px">
+    <span class="muted small">Prompt type</span>
+    <button class="btn small ${S.mode === 'image' ? 'on primary' : ''}" onclick="S.mode='image';render()">Image</button>
+    <button class="btn small ${S.mode === 'video' ? 'on primary' : ''}" onclick="S.mode='video';render()">Video</button>
+    <div class="spacer"></div>
+    <button class="btn small" onclick="bulkAdd()">Add many files</button>
+    <a href="/api/projects/${pid()}/export?kind=${S.mode}&act=${S.act}"><button class="btn small">Download this act's ${S.mode} prompts</button></a>
+    <a href="/api/projects/${pid()}/export?kind=${S.mode}"><button class="btn small">Download all ${S.mode} prompts</button></a>
+  </div>
+  <div class="acts">${acts}</div>
+  ${batchCard(act)}
+  <div class="card"><label style="margin-top:0">Act title</label><input type="text" value="${esc(act.title)}" onchange="edit('act',${S.act},{title:this.value})"></div>
+  ${rows}`;
+}
+
+// Copy a whole act (or a slice of it) as one block to paste into Flow's Agent panel.
+function batchChunks(act) {
+  const size = S.batch === 0 ? act.scenes.length : (S.batch || 5);
+  const out = [];
+  for (let i = 0; i < act.scenes.length; i += size) out.push(act.scenes.slice(i, i + size));
+  return out;
+}
+function batchText(scenes) {
+  const kind = S.mode;
+  const head = kind === 'video'
+    ? `Generate one separate 8 second video clip for each numbered scene below, ${scenes.length} in total, in this order. Use the saved characters in this project, keeping every face, outfit and location exactly as described. Do not add text, captions or logos. Do not combine scenes. Start now.`
+    : `Generate one separate 16:9 widescreen image for each numbered scene below, ${scenes.length} images in total, in this order. Use the saved characters in this project for every person named, keeping each face, hair and build exactly the same, and follow the outfit written in each scene. Do not add text, captions or logos. Do not combine scenes. Start now.`;
+  return head + '\n\n' + scenes.map((sc, i) => `SCENE ${i + 1} (name the file ${sc.id})\n${sc.prompts[kind]}`).join('\n\n');
+}
+function batchCard(act) {
+  const done = copied.get();
+  const chunks = batchChunks(act);
+  const sizes = [[3, '3 at a time'], [4, '4 at a time'], [5, '5 at a time'], [0, 'Whole act']];
+  const btns = chunks.map((c, i) => {
+    const all = c.every(s => done[s.id + ':' + S.mode]);
+    return `<button class="btn small ${all ? 'done' : ''}" onclick="copyBatch(${i}, this)">${all ? 'Copied' : 'Copy'} ${c[0].id} to ${c[c.length - 1].id}</button>`;
+  }).join(' ');
+  return `<div class="card"><div class="row"><b>Copy for Flow</b><span class="muted small">Paste one block into the Flow Agent panel and it generates every scene in it.</span><div class="spacer"></div>
+    <select style="width:auto" onchange="S.batch=parseInt(this.value,10);render()">${sizes.map(([v, l]) => `<option value="${v}" ${(S.batch == null ? 5 : S.batch) === v ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
+    <div class="row" style="margin-top:10px;flex-wrap:wrap">${btns}</div></div>`;
+}
+function copyBatch(i, btn) {
+  const act = S.project.plan.acts[S.act];
+  const chunk = batchChunks(act)[i];
+  copyText(batchText(chunk), null, btn);
+  chunk.forEach(s => copied.mark(s.id + ':' + S.mode));
+}
+const scenePrompt = id => flatScenes().find(s => s.id === id).prompts[S.mode];
+function sceneEditor(sc) {
+  const plan = S.project.plan;
+  const cast = plan.characters.map(c => {
+    const inScene = sc.characters.find(x => x.id === c.id);
+    return `<div class="row" style="flex-wrap:nowrap;margin-bottom:4px"><label style="margin:0;display:flex;gap:6px;align-items:center;width:190px;color:var(--text)"><input type="checkbox" ${inScene ? 'checked' : ''} onchange="toggleCast('${sc.id}','${c.id}',this.checked)">${esc(c.name)}</label>
+      ${inScene ? `<select style="width:auto" onchange="setOutfit('${sc.id}','${c.id}',this.value)">${c.wardrobe.map(w => `<option value="${w.id}" ${w.id === inScene.wardrobe ? 'selected' : ''}>${esc(w.label)}</option>`).join('')}</select>` : ''}</div>`;
+  }).join('');
+  const f = (key, label, wide) => `<div class="${wide ? 'wide' : ''}"><label>${label}</label><input type="text" value="${esc(sc[key])}" onchange="edit('scene','${sc.id}',{${key}:this.value})"></div>`;
+  return `<div class="card" style="background:var(--panel2)"><div class="fields">
+    ${f('action', 'What is visible', true)}${f('emotion', 'Expression and body language')}${f('lighting', 'Lighting')}
+    ${f('motion', 'Movement (video prompts only)', true)}
+    <div><label>Shot</label><select onchange="edit('scene','${sc.id}',{shot:this.value})">${SHOTS.map(s => `<option ${s === sc.shot ? 'selected' : ''}>${s}</option>`).join('')}</select></div>
+    <div><label>Location</label><select onchange="edit('scene','${sc.id}',{location:this.value})">${plan.locations.map(l => `<option value="${l.id}" ${l.id === sc.location ? 'selected' : ''}>${esc(l.name)}</option>`).join('')}</select></div>
+    <div class="wide"><label>Who is in the picture</label>${cast}</div></div></div>`;
+}
+function toggleCast(sid, cid, on) {
+  const sc = flatScenes().find(s => s.id === sid);
+  const list = sc.characters.filter(c => c.id !== cid).map(c => ({ ...c }));
+  if (on) list.push({ id: cid });
+  edit('scene', sid, { characters: list });
+}
+function setOutfit(sid, cid, wid) {
+  const sc = flatScenes().find(s => s.id === sid);
+  edit('scene', sid, { characters: sc.characters.map(c => c.id === cid ? { id: cid, wardrobe: wid } : { ...c }) });
+}
+function bulkAdd() {
+  pickFile('image/*,video/*', true, async files => {
+    const scenes = flatScenes();
+    const byName = [], loose = [];
+    files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+    files.forEach(f => { const m = f.name.toUpperCase().match(/A\d+S\d{3}/); const sc = m && scenes.find(s => s.id === m[0]); sc ? byName.push([sc.id, f]) : loose.push(f); });
+    if (loose.length) {
+      const empty = S.project.plan.acts[S.act].scenes.filter(s => !s.asset && !byName.some(b => b[0] === s.id));
+      if (!confirm(`${loose.length} file${loose.length > 1 ? 's have' : ' has'} no scene code in the name. Place them in order into the empty scenes of this act, starting at ${empty[0] ? empty[0].id : 'none'}?`)) loose.length = 0;
+      loose.forEach((f, i) => empty[i] && byName.push([empty[i].id, f]));
+    }
+    let ok = 0, last;
+    for (const [sid, f] of byName) {
+      try { last = await upload(`/api/projects/${pid()}/asset/${sid}`, f); ok++; toast(`Adding files: ${ok} of ${byName.length}`); } catch (e) { toast(`${f.name}: ${e.message}`, true); }
+    }
+    if (last) setProject(last.project);
+    toast(`${ok} file${ok === 1 ? '' : 's'} placed`);
+  });
+}
+
+// Jobs
+async function watchJob(job, onDone) {
+  S.job = job; render();
+  while (S.job && S.job.status === 'running') {
+    await new Promise(r => setTimeout(r, 1200));
+    try { S.job = await api('/api/jobs/' + job.id); } catch (e) { S.job = { ...S.job, status: 'failed', error: e.message }; }
+    const bar = $('jobBar'), label = $('jobLabel');
+    if (bar && S.job) { bar.style.width = Math.round(100 * S.job.done / Math.max(1, S.job.total)) + '%'; label.textContent = `${S.job.message} (${S.job.done} of ${S.job.total})`; }
+  }
+  const finished = S.job; S.job = null;
+  S.project = (await api('/api/projects/' + pid())).project;
+  if (finished.status === 'failed') toast(finished.error, true); else toast('Finished');
+  if (onDone) await onDone(finished);
+  render();
+}
+function jobPanel(type) {
+  if (!S.job || S.job.type !== type) return '';
+  return `<div class="card"><div class="row" style="margin-bottom:8px"><b id="jobLabel">${esc(S.job.message)} (${S.job.done} of ${S.job.total})</b></div><div class="bar"><div id="jobBar" style="width:${Math.round(100 * S.job.done / Math.max(1, S.job.total))}%"></div></div><p class="muted small" style="margin:8px 0 0">You can keep working in other tabs while this runs.</p></div>`;
+}
+
+// 5. Narration
+function viewNarration() {
+  const p = S.project, plan = p.plan;
+  if (S.nact == null || S.nact >= plan.acts.length) S.nact = 0;
+  const act = plan.acts[S.nact];
+  const all = flatScenes(), scenes = act.scenes;
+  const haveAll = all.filter(s => s.audio).length;
+  const have = scenes.filter(s => s.audio).length;
+  const total = scenes.reduce((a, s) => a + (s.audio ? s.audio.duration : 0), 0);
+  const voice = p.settings.voice || S.defaultVoice;
+  const running = S.job && S.job.type === 'narrate';
+  const actBtns = plan.acts.map((a, i) => {
+    const n = a.scenes.filter(s => s.audio).length;
+    return `<button class="btn small ${i === S.nact ? 'on' : ''}" onclick="S.nact=${i};render();window.scrollTo(0,0)">${esc(a.title)} <span class="muted">${n}/${a.scenes.length}</span></button>`;
+  }).join('');
+  const rows = scenes.map(sc => `<tr><td><b>${sc.id}</b></td><td class="muted small" style="max-width:520px">${esc(sc.narration.slice(0, 150))}${sc.narration.length > 150 ? '...' : ''}</td>
+    <td>${sc.audio ? `<audio controls preload="none" src="${media('audio', sc.audio.file)}"></audio> <span class="muted small">${sc.audio.duration.toFixed(1)}s</span>` : '<span class="pill warn">not voiced</span>'}</td>
+    <td style="white-space:nowrap"><button class="btn small" ${running ? 'disabled' : ''} onclick="narrate({sceneIds:['${sc.id}']})">${sc.audio ? 'Redo' : 'Voice'}</button>
+    <button class="btn small" onclick="pickFile('audio/*', false, f => uploadAudio('${sc.id}', f))">Upload</button></td></tr>`).join('');
+  return `<h2>Narration</h2><p class="lead">Pick a voice and listen to a sample first. Then voice one act at a time, or every act at once. The length of each clip decides how long its picture stays on screen.</p>
+  ${S.health.kokoro || S.health.mac ? '' : '<div class="notice bad">The narrator voice is not installed in this folder yet. You can still upload your own audio per scene.</div>'}
+  <div class="card"><div class="row">
+    <div><label style="margin-top:0">Voice</label><select id="voiceSel" style="width:320px" onchange="edit('settings',null,{voice:this.value})">${S.voices.map(v => `<option value="${v.name}" ${v.name === voice ? 'selected' : ''}>${esc(v.displayName)}</option>`).join('')}</select></div>
+    <div><label style="margin-top:0">Speed (blank for default)</label><input type="number" step="0.05" min="0.6" max="1.4" style="width:150px" value="${p.settings.speed == null ? '' : esc(p.settings.speed)}" placeholder="0.95" onchange="edit('settings',null,{speed:this.value===''?null:parseFloat(this.value)})"></div>
+    <div style="align-self:flex-end"><button class="btn" id="prevBtn" onclick="previewVoice()">Preview voice</button></div>
+  </div>
+  <div class="row" style="margin-top:10px"><audio id="prevAudio" controls style="display:none;width:100%"></audio></div>
+  <div class="muted small" style="margin-top:6px">The preview reads the first lines of the selected act with the voice and speed above. Changing either does not alter audio you already made.</div></div>
+  <div class="card"><div class="row"><div class="muted">Select an act</div><div class="spacer"></div>
+    <span class="muted">${haveAll} of ${all.length} scenes voiced in total</span>
+    <button class="btn primary" ${running || haveAll === all.length ? 'disabled' : ''} onclick="narrate({onlyMissing:true})">Voice every act (missing only)</button>
+    <button class="btn" ${running ? 'disabled' : ''} onclick="if(confirm('Redo narration for every scene in every act with the selected voice?'))narrate({})">Redo every act</button></div>
+    <div class="row" style="margin-top:10px;flex-wrap:wrap">${actBtns}</div></div>
+  <div class="card"><div class="row"><b>${esc(act.title)}</b><span class="muted">${have} of ${scenes.length} voiced, ${(total / 60).toFixed(1)} min</span><div class="spacer"></div>
+    <button class="btn primary" ${running || have === scenes.length ? 'disabled' : ''} onclick="narrate({actIndex:${S.nact},onlyMissing:true})">Voice this act (missing only)</button>
+    <button class="btn" ${running ? 'disabled' : ''} onclick="if(confirm('Redo narration for every scene in this act?'))narrate({actIndex:${S.nact}})">Redo this act</button></div></div>
+  ${jobPanel('narrate')}
+  <div class="card" style="padding:4px 6px"><table><tr><th>Scene</th><th>Lines</th><th>Narration</th><th></th></tr>${rows}</table></div>`;
+}
+async function previewVoice() {
+  const btn = document.getElementById('prevBtn'), el = document.getElementById('prevAudio');
+  const sel = document.getElementById('voiceSel');
+  const act = S.project.plan.acts[S.nact || 0];
+  btn.disabled = true; btn.textContent = 'Generating sample...';
+  try {
+    const r = await fetch('/api/voice-preview', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ voice: sel.value, speed: S.project.settings.speed, text: act.scenes[0].narration }) });
+    if (!r.ok) throw new Error((await r.json().catch(() => ({}))).error || 'Could not make a sample.');
+    el.src = URL.createObjectURL(await r.blob()); el.style.display = 'block'; el.play();
+  } catch (e) { toast(e.message, true); }
+  btn.disabled = false; btn.textContent = 'Preview voice';
+}
+async function narrate(body) { try { const r = await post(`/api/projects/${pid()}/narrate`, body); watchJob(r.job); } catch (e) { toast(e.message, true); } }
+async function uploadAudio(sid, files) { try { setProject((await upload(`/api/projects/${pid()}/audio/${sid}`, files[0])).project); } catch (e) { toast(e.message, true); } }
+
+// 6. Compile
+async function loadRenders() { try { S.renders = (await api(`/api/projects/${pid()}/renders`)).files; if (S.tab === 'compile') render(); } catch {} }
+function viewCompile() {
+  const p = S.project, plan = p.plan, running = S.job && S.job.type === 'compile';
+  const allReady = flatScenes().every(s => s.asset && s.audio);
+  const acts = plan.acts.map((a, i) => {
+    const img = a.scenes.filter(s => s.asset).length, aud = a.scenes.filter(s => s.audio).length, n = a.scenes.length;
+    const ready = img === n && aud === n;
+    const secs = a.scenes.reduce((t, s) => t + (s.audio ? s.audio.duration : 0), 0);
+    return `<tr><td><b>${esc(a.title)}</b></td><td><span class="pill ${img === n ? 'good' : 'warn'}">${img}/${n} pictures</span></td><td><span class="pill ${aud === n ? 'good' : 'warn'}">${aud}/${n} narration</span></td><td class="muted small">${(secs / 60).toFixed(1)} min</td>
+      <td style="text-align:right"><button class="btn small ${ready ? 'primary' : ''}" ${running ? 'disabled' : ''} onclick="compile({scope:'act',actIndex:${i}}, ${ready})">Compile this act</button></td></tr>`;
+  }).join('');
+  const files = S.renders.length ? S.renders.map(f => `<tr><td>${esc(f.file)}</td><td class="muted small">${(f.size / 1048576).toFixed(1)} MB</td><td class="muted small">${new Date(f.modified).toLocaleString()}</td>
+    <td style="text-align:right"><a href="${media('renders', f.file)}" target="_blank"><button class="btn small">Play</button></a> <a href="${media('renders', f.file)}?download=1"><button class="btn small primary">Download</button></a></td></tr>`).join('') : '<tr><td class="muted">Nothing compiled yet.</td></tr>';
+  return `<h2>Compile</h2><p class="lead">Build a single scene, one act or the whole film. Scenes that have not changed are reused, so recompiling after swapping one picture is quick.</p>
+  ${S.health.ffmpeg ? '' : '<div class="notice bad">The video compiler (ffmpeg) was not found. Start the app with the Start file in its folder.</div>'}
+  <div class="card"><div class="row">
+    <div><label style="margin-top:0">Resolution</label><select style="width:150px" onchange="edit('settings',null,{size:this.value})"><option value="1080p" ${p.settings.size === '1080p' ? 'selected' : ''}>1080p</option><option value="720p" ${p.settings.size === '720p' ? 'selected' : ''}>720p (faster)</option></select></div>
+    <label style="display:flex;gap:6px;align-items:center;color:var(--text);margin:18px 0 0"><input type="checkbox" ${p.settings.captions ? 'checked' : ''} onchange="edit('settings',null,{captions:this.checked})">Burn in captions</label>
+    ${S.health.overlay ? `<label style="display:flex;gap:6px;align-items:center;color:var(--text);margin:18px 0 0"><input type="checkbox" ${p.settings.overlay ? 'checked' : ''} onchange="edit('settings',null,{overlay:this.checked})">Subscribe button overlay</label>` : ''}
+    <div class="spacer"></div>
+    <button class="btn primary" ${running ? 'disabled' : ''} onclick="compile({scope:'all'}, ${allReady})">Compile the full film</button>
+  </div></div>
+  ${jobPanel('compile')}
+  <div class="card" style="padding:4px 6px"><table><tr><th>Act</th><th>Pictures</th><th>Narration</th><th>Length</th><th></th></tr>${acts}</table></div>
+  <div class="card"><div class="row"><div><label style="margin-top:0">Single scene</label><select id="oneScene" style="width:160px">${flatScenes().map(s => `<option>${s.id}</option>`).join('')}</select></div>
+    <button class="btn" style="margin-top:18px" ${running ? 'disabled' : ''} onclick="compileOne()">Compile this scene</button></div></div>
+  <h3 style="margin-top:20px">Finished files</h3>
+  <div class="card" style="padding:4px 6px"><table>${files}</table></div>`;
+}
+function compileOne() { const id = $('oneScene').value; const sc = flatScenes().find(s => s.id === id); compile({ scope: 'scene', sceneId: id }, !!(sc.asset && sc.audio)); }
+async function compile(body, ready) {
+  if (!ready) {
+    if (!confirm('Some scenes here are missing a picture or narration. Compile anyway with grey placeholder cards and silence for the gaps?')) return;
+    body.placeholders = true;
+  }
+  try { const r = await post(`/api/projects/${pid()}/compile`, body); watchJob(r.job, loadRenders); } catch (e) { toast(e.message, true); }
+}
+
+boot().catch(e => toast(e.message, true));
+</script>
+</body>
+</html>
