@@ -139,6 +139,25 @@ app.post('/api/projects', wrap((req, res) => {
   res.json({ project: story.hydrate(project) });
 }));
 
+// Move a finished project to the macOS Trash (recoverable). Only a folder directly
+// inside projects/ can ever be touched, so app files and code are never at risk.
+app.delete('/api/projects/:id', wrap(async (req, res) => {
+  const id = req.params.id;
+  loadProject(id); // 404 if it does not exist, and checks safeId
+  const dir = dirOf(id);
+  if (path.dirname(path.resolve(dir)) !== path.resolve(PROJECTS_DIR)) throw bad('Invalid project.');
+  const { execFile } = require('child_process');
+  const trashed = await new Promise(resolve => {
+    execFile('osascript', ['-e', `tell application "Finder" to delete POSIX file "${path.resolve(dir)}"`], err => resolve(!err));
+  });
+  if (!trashed) {
+    const trash = path.join(require('os').homedir(), '.Trash');
+    fs.mkdirSync(trash, { recursive: true });
+    fs.renameSync(dir, path.join(trash, `${id}-${Date.now()}`));
+  }
+  res.json({ ok: true });
+}));
+
 app.get('/api/projects/:id', wrap((req, res) => {
   res.json({ project: story.hydrate(loadProject(req.params.id)) });
 }));
@@ -451,6 +470,14 @@ app.get('/api/projects/:id/export', wrap((req, res) => {
   res.setHeader('Content-Disposition', `attachment; filename="${project.id}_${kind}-prompts_${suffix}.txt"`);
   res.type('text/plain').send(body);
 }));
+
+// Stop the studio from the page. Only accepted from this computer.
+app.post('/api/shutdown', (req, res) => {
+  const ip = req.socket.remoteAddress || '';
+  if (!['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(ip)) return res.status(403).json({ error: 'Only this computer can stop the studio.' });
+  res.json({ ok: true });
+  setTimeout(() => process.exit(0), 300);
+});
 
 app.listen(PORT, () => {
   console.log(`\n  Story Studio is running.\n  Open http://localhost:${PORT} in your browser.\n  Keep this window open while you work. Press Ctrl+C to stop.\n`);

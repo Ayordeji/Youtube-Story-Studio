@@ -77,9 +77,11 @@
   <h1>Story <span>Studio</span></h1>
   <select id="projectSelect" style="width:auto;min-width:220px"></select>
   <button class="btn small" onclick="newProject()">New project</button>
+  <button class="btn small" id="delProject" onclick="deleteProject()" title="Move this project to the Trash">Delete project</button>
   <div class="spacer"></div>
   <span class="dot" id="dotFfmpeg"><i></i>Video compiler</span>
   <span class="dot" id="dotVoice"><i></i>Narrator</span>
+  <button class="btn small" onclick="stopStudio()" title="Shut Story Studio down">Stop Studio</button>
 </header>
 <nav id="nav"></nav>
 <main id="main"></main>
@@ -147,6 +149,25 @@ async function openProject(id) {
   $('projectSelect').value = id;
   S.tab = S.project.plan ? 'scenes' : 'plan';
   render();
+}
+async function deleteProject() {
+  if (!S.project) return toast('Open a project first.', true);
+  const p = S.project;
+  if (!confirm(`Move "${p.title}" to the Trash?\n\nThis removes its images, narration and any finished videos for this project. Copy the final video somewhere safe first if you want to keep it. The app and your other projects are not touched.`)) return;
+  try {
+    await api('/api/projects/' + p.id, { method: 'DELETE' });
+    S.project = null;
+    try { localStorage.removeItem('studio-last'); } catch {}
+    await refreshProjects();
+    if (S.projects.length) await openProject(S.projects[0].id); else { S.creating = true; render(); }
+    toast('Moved to the Trash');
+  } catch (e) { toast(e.message, true); }
+}
+async function stopStudio() {
+  if (S.job && S.job.status === 'running') { if (!confirm('Something is still running (narration or compiling). Stop Story Studio anyway?')) return; }
+  else if (!confirm('Stop Story Studio? You can start it again any time from the Story Studio app.')) return;
+  try { await api('/api/shutdown', { method: 'POST' }); } catch (e) { return toast(e.message, true); }
+  document.body.innerHTML = '<div style="font:16px system-ui;color:#ddd;background:#111;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center"><div><h2>Story Studio has stopped.</h2><p>You can close this tab. Open the Story Studio app to start it again.</p></div></div>';
 }
 function newProject() { S.creating = true; S.tab = 'script'; render(); }
 function setProject(p) { S.project = p; render(); }

@@ -1,0 +1,19 @@
+#!/bin/bash
+# Starts Story Studio quietly (no Terminal window) and opens it in the browser.
+DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+cd "$DIR" || exit 1
+export PATH="$DIR/bin/bin:$DIR/bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+URL="http://localhost:3100"
+
+if ! curl -s -o /dev/null --max-time 2 "$URL/api/projects"; then
+  if ! command -v node >/dev/null 2>&1; then
+    osascript -e 'display alert "Story Studio" message "Node was not found in the bin folder next to this app."'
+    exit 1
+  fi
+  nohup node server.js >> "$DIR/studio.log" 2>&1 &
+  for i in $(seq 1 30); do
+    curl -s -o /dev/null --max-time 1 "$URL/api/projects" && break
+    sleep 0.5
+  done
+fi
+open "$URL"
